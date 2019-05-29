@@ -1,0 +1,14 @@
+<div class="carousel-box">
+  <ngb-carousel class="afcs-carousel" [showNavigationArrows]="false" [showNavigationIndicators]="false" #carousel>
+    <ng-template ngbSlide *ngFor="let img of homepageCarouselImgs; index as i">
+      <img [src]="img.url" alt="carousel {{i}}">
+    </ng-template>
+  </ngb-carousel>
+  <span class="dot"
+        [ngClass]="{'active-img': pic.id === img.activeId}"
+        *ngFor="let pic of homepageCarouselImgs"></span>
+
+  <div class="carousel-text-box">
+    <p class="carousel-text" *ngFor="let line of carouselText">{{line.text}}</p>
+  </div>
+</div>

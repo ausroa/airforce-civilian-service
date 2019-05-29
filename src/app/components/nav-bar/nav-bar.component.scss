@@ -1,0 +1,128 @@
+.afcs-nav-bar {
+  position: absolute;
+  width: 100%;
+}
+
+nav {
+  background-color: white;
+}
+
+.nav-logo {
+  mix-blend-mode: multiply;
+  height: 5.5rem;
+  width: 20rem;
+  margin-left: 2.5rem;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-search-icon {
+  mix-blend-mode: multiply;
+  height: 3rem;
+  position: relative;
+  top: 1.5rem;
+}
+
+.nav-button {
+  padding: 0 6% 0 4%;
+  height: 5.5rem;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.nav-btn-register {
+  padding: 1.6rem 3rem 1.6rem 3rem;
+  border: none;
+  outline: none;
+  background-color: rgb(27, 33, 52);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+  margin-right: 1rem;
+  content: '[';
+  -webkit-transform: translateX(2rem);
+  -moz-transform: translateX(2rem);
+  transform: translateX(2rem);
+}
+
+.cl-effect-1 a::after {
+  margin-left: 1rem;
+  content: ']';
+  -webkit-transform: translateX(-2rem);
+  -moz-transform: translateX(-2rem);
+  transform: translateX(-2rem);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.active::before {
+  margin-right: 1rem;
+  content: '[';
+}
+.active::after {
+  margin-left: 1rem;
+  content: ']';
+}
+
+$transition: all .5s ease;
+
+.search {
+  width: 5rem;
+  height: 5.4rem;
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+  background-color: lightgray;
+  text-align: center;
+  &.open {
+    width: 42rem;
+  }
+}
+
+.search-box {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: black;
+  padding: 2rem 10rem 2rem 4.5rem;
+  font-size: 1.5rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-button {
+  width: 8rem;
+  height: 10rem;
+  display: block;
+  position: absolute;
+  right: -1.6rem;
+  top: -2.3rem;
+  padding: 2rem;
+  cursor: pointer;
+}

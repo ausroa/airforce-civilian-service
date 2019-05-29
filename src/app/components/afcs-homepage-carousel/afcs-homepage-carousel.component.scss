@@ -1,0 +1,52 @@
+.carousel-box {
+  position: relative;
+}
+
+.afcs-carousel {
+  position: relative;
+  background-color: black;
+  display: inline-block;
+  z-index: -1;
+}
+
+.nav-bubbles {
+  display: block;
+  position: absolute;
+  top: 88rem;
+  left: 10rem;
+}
+
+.dot {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -6.5rem;
+  left: 5vw;
+  margin: 0 1.5rem 0 0;
+}
+
+.active-img {
+  background-color: dodgerblue;
+}
+
+p {
+  color: #fff;
+}
+
+.carousel-text-box {
+  max-width: 100%;
+  position: absolute;
+  display: block;
+  top: 17vw;
+  left: 5vw;
+}
+
+.carousel-text {
+  max-width: 100%;
+  display: block;
+  color: #fff;
+  font-size: 4vw;
+}
