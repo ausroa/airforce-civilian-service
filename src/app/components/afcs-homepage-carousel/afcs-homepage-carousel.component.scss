@@ -57,7 +57,7 @@ p {
   background-color: white;
   border-radius: 50%;
   @include inline-block;
-  top: -10vh;
+  top: -4vw;
   left: $c-text-left;
   margin: 0 $c-bubble-w 0 0;
   animation: moveInBottom 1s ease-out;
