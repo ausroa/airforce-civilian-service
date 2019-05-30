@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.carousel-logo {
+  position: absolute;
+  width: 10vw;
+  top: 10vw;
+  left: 5vw;
+  animation: moveInRight 1s ease-out;
+}
+
 .afcs-carousel {
   position: relative;
   background-color: black;
@@ -17,15 +25,16 @@
 }
 
 .dot {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 0.8vw;
+  width: 0.8vw;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  top: -6.5rem;
+  top: -10vh;
   left: 5vw;
-  margin: 0 1.5rem 0 0;
+  margin: 0 0.8vw 0 0;
+  animation: moveInBottom 1s ease-out;
 }
 
 .active-img {
@@ -34,6 +43,13 @@
 
 p {
   color: #fff;
+  line-height: 3.5vw;
+  animation: moveInLeft 1s ease-out;
+
+  &:last-child {
+    font-size: 2.6vw;
+    margin-top: 2vw;
+  }
 }
 
 .carousel-text-box {
@@ -50,3 +66,5 @@ p {
   color: #fff;
   font-size: 4vw;
 }
+
+
