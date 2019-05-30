@@ -1,40 +1,40 @@
-<div class="afcs-nav-bar">
-  <nav class="navbar navbar-expand-lg navbar-light cl-effect-1" style="padding: 0; position: relative; top: -1px;">
-    <img class="navbar-brand nav-logo"
-         src="assets/imgs/logo 1.png"
-         alt="">
-    <button class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav id="navbarNav" class="nav navbar navbar-expand-lg navbar-light cl-effect-1" style="padding: 0; position: relative; top: -1px;">
+  <img class="navbar-brand nav-logo"
+       src="assets/imgs/logo 1.png"
+       alt="">
+  <!--TODO fix drop down menu-bar-->
+  <button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse flex-grow-1 text-right"
-         id="myNavbar">
-      <ul class="navbar-nav ml-auto flex-nowrap">
-        <li class="nav-item" *ngFor="let link of links">
-          <a routerLink="{{link.url}}"
-             class="nav-link m-2 menu-item">{{link.linkName}}</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <div class="search">
-          <input type="search" class="search-box" />
-          <span class="search-button">
-            <img class="nav-search-icon" src="assets/imgs/magniglass.png" alt="">
-          </span>
-        </div>
-      </form>
-      <div>
-        <button class="nav-btn-register">
-         Register
-        </button>
+  <div class="collapse navbar-collapse flex-grow-1 text-right"
+       id="myNavbar">
+    <ul class="navbar-nav ml-auto flex-nowrap">
+      <li class="nav-item" *ngFor="let link of links">
+        <a routerLink="{{link.url}}"
+           class="nav-link m-2 menu-item">{{link.linkName}}</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="search">
+        <input type="search" class="search-box" />
+        <span class="search-button">
+          <img class="nav-search-icon" src="assets/imgs/magniglass.png" alt="">
+        </span>
       </div>
+    </form>
+    <div class="nav-button">
+      <button class="nav-btn-register">
+       Register
+      </button>
     </div>
-  </nav>
+  </div>
+</nav>
 
-</div>
+

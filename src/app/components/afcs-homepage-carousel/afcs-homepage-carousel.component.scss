@@ -1,44 +1,43 @@
+$c-logo-w: 10vw;
+$c-bubble-h: 0.8vw;
+$c-bubble-w: 0.8vw;
+$c-text-left: 5vw;
+
+@mixin inline-block {
+  position: relative;
+  display: inline-block;
+}
+
 .carousel-box {
   position: relative;
+
+  &-logo {
+    position: absolute;
+    width: $c-logo-w;
+    top: 10vw;
+    left: $c-text-left;
+    animation: moveInRight 1s ease-out;
+  }
 }
 
-.carousel-logo {
-  position: absolute;
-  width: 10vw;
-  top: 10vw;
-  left: 5vw;
-  animation: moveInRight 1s ease-out;
-}
-
-.afcs-carousel {
-  position: relative;
-  background-color: black;
-  display: inline-block;
+.carousel {
+  @include inline-block;
   z-index: -1;
-}
 
-.nav-bubbles {
-  display: block;
-  position: absolute;
-  top: 88rem;
-  left: 10rem;
-}
+  &-text-box {
+    max-width: 100%;
+    position: absolute;
+    display: block;
+    top: 17vw;
+    left: $c-text-left;
+  }
 
-.dot {
-  height: 0.8vw;
-  width: 0.8vw;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  top: -10vh;
-  left: 5vw;
-  margin: 0 0.8vw 0 0;
-  animation: moveInBottom 1s ease-out;
-}
-
-.active-img {
-  background-color: dodgerblue;
+  &-text {
+    max-width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 4vw;
+  }
 }
 
 p {
@@ -52,19 +51,21 @@ p {
   }
 }
 
-.carousel-text-box {
-  max-width: 100%;
-  position: absolute;
-  display: block;
-  top: 17vw;
-  left: 5vw;
+.bubble {
+  height: $c-bubble-h;
+  width: $c-bubble-w;
+  background-color: white;
+  border-radius: 50%;
+  @include inline-block;
+  top: -10vh;
+  left: $c-text-left;
+  margin: 0 $c-bubble-w 0 0;
+  animation: moveInBottom 1s ease-out;
 }
 
-.carousel-text {
-  max-width: 100%;
-  display: block;
-  color: #fff;
-  font-size: 4vw;
+.active-img {
+  background-color: dodgerblue;
 }
+
 
 

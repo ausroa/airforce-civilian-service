@@ -7,15 +7,13 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { AfcsHomepageCarouselComponent } from './components/afcs-homepage-carousel/afcs-homepage-carousel.component';
-import { CarouselImgComponent } from './components/afcs-homepage-carousel/carousel-img/carousel-img.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomepageComponent,
-    AfcsHomepageCarouselComponent,
-    CarouselImgComponent
+    AfcsHomepageCarouselComponent
   ],
   imports: [
     BrowserModule,
