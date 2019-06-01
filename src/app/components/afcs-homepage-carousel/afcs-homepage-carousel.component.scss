@@ -1,17 +1,11 @@
-$c-logo-w: 10vw;
-$c-bubble-h: 0.8vw;
-$c-bubble-w: 0.8vw;
-$c-text-left: 5vw;
-$afcs-blue: rgb(14, 23, 38);
-$afcs-blue-transparent: rgba(14, 23, 38, 0.50);
-
-@mixin inline-block {
-  position: relative;
-  display: inline-block;
-}
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/animations";
 
 .carousel-box {
-  position: relative;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background-color: $afcs-blue-transparent;
 
   &-logo {
@@ -22,25 +16,8 @@ $afcs-blue-transparent: rgba(14, 23, 38, 0.50);
     animation: moveInRight 1s ease-out;
   }
 }
-
 .carousel {
-  @include inline-block;
   z-index: -1;
-
-  &-text-box {
-    max-width: 100%;
-    position: absolute;
-    display: block;
-    top: 17vw;
-    left: $c-text-left;
-  }
-
-  &-text {
-    max-width: 100%;
-    display: block;
-    color: #fff;
-    font-size: 4vw;
-  }
 }
 
 p {
@@ -69,6 +46,7 @@ p {
 .active-img {
   background-color: dodgerblue;
 }
+
 
 
 

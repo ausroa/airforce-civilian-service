@@ -1,15 +1,13 @@
-.afcs {
-  &-nav-container {
-    position: relative;
-    display: block;
-  }
+@import "abstracts/variables";
+.afcs-container {
+  position: relative;
+}
 
-  &-main-container {
-    position: relative;
-    top: -0.087rem;
-    width: 100%;
-    display: inline-block;
-    background-color: rgb(14, 23, 38);
-    z-index: 1;
-  }
+.header {
+  width: 100%;
+}
+
+.views {
+  overflow: hidden;
+  width: 100%;
 }

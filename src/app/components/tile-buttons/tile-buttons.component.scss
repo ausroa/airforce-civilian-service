@@ -1,0 +1,15 @@
+@import "abstracts/variables";
+
+.tile-buttons {
+  z-index: 2;
+  position: relative;
+  top: -2rem;
+
+  &-button {
+    display: inline-block;
+    height: 30vw;
+    width: 20%;
+    background-color: $afcs-blue;
+    border: 1px solid white;
+  }
+}

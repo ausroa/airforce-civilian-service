@@ -1,25 +1,10 @@
-$search-transition: all .5s ease;
-$nav-color-white: #fff;
-$nav-font-size: 1.5rem;
-
-$nav-link-b-space: 1rem;
-
-$nav-logo-height: 5.5rem;
-$nav-logo-width: 20rem;
-
-$search-input-height: 5.4rem;
-$search-input-width: 5rem;
-
-$search-button-height: 10rem;
-$search-button-width: 8rem;
-
-@mixin remove-border {
-  border: none;
-  outline: none;
-}
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 .nav {
+  position: relative;
   background-color: $nav-color-white;
+  padding: 0;
 
   &-logo {
     mix-blend-mode: multiply;
@@ -37,21 +22,34 @@ $search-button-width: 8rem;
     mix-blend-mode: multiply;
     height: 3rem;
     position: relative;
-    top: 1.5rem;
   }
 
   &-btn {
-    padding: 0 6% 0 4%;
     height: 5.5rem;
+    position: relative;
     @include remove-border;
     text-align: center;
+    background-color: rgb(27, 33, 52);
+    transition: $search-transition;
 
-    &-register {
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 5px 5px 10px #000;
+    }
+
+    &:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 5px 5px 5px #000;
+    }
+
+    &-text {
       padding: 1.6rem 3rem 1.6rem 3rem;
       @include remove-border;
-      background-color: rgb(27, 33, 52);
-      color: $nav-color-white;
+      color: $nav-color-white !important;
       font-size: $nav-font-size;
+      position: relative;
+      top: 25%;
+      cursor: pointer;
     }
   }
 }
@@ -112,6 +110,16 @@ $search-button-width: 8rem;
   background-color: lightgray;
   text-align: center;
 
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 5px 5px 10px #000;
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 5px 5px 5px #000;
+  }
+
   &.open {
     width: 42rem;
   }
@@ -134,10 +142,9 @@ $search-button-width: 8rem;
   &-button {
     width: $search-button-width;
     height: $search-button-height;
-    display: block;
     position: absolute;
     right: -1.6rem;
-    top: -2.3rem;
+    top: -1rem;
     padding: 2rem;
     cursor: pointer;
   }

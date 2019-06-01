@@ -1,0 +1,9 @@
+@mixin remove-border {
+  border: none;
+  outline: none;
+}
+
+@mixin inline-block {
+  position: relative;
+  display: inline-block;
+}

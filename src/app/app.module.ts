@@ -5,15 +5,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { HomepageComponent } from './views/homepage/homepage.component';
 import { AfcsHomepageCarouselComponent } from './components/afcs-homepage-carousel/afcs-homepage-carousel.component';
+import { TileButtonsComponent } from './components/tile-buttons/tile-buttons.component';
+import { HomepageComponent } from './views/homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    HomepageComponent,
-    AfcsHomepageCarouselComponent
+    AfcsHomepageCarouselComponent,
+    TileButtonsComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

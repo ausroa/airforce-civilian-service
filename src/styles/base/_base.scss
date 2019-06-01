@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "abstracts/mixins";
+@import "animations";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {}
+
+.carousel {
+  @include inline-block;
+  z-index: -1;
+
+  &-text-box {
+    max-width: 100%;
+    position: absolute;
+    display: block;
+    top: 17vw;
+    left: $c-text-left;
+  }
+
+  &-text {
+    max-width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 4vw;
+    text-shadow: 5px 5px 10px #000;
+  }
+
+  &-inner {
+    height: 100%;
+    width: 100%;
+  }
+
+  &-item {
+    transition: opacity 1.2s ease!important;
+    position: absolute!important;
+    display: block!important;
+    opacity: 0;
+
+    &.active {
+      position: relative!important;
+      opacity: 1;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}
