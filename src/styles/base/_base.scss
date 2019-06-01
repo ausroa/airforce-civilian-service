@@ -37,6 +37,7 @@ body {}
     &:nth-child(3) {
       font-size: 2.6vw;
       margin-top: 2vw;
+      animation: moveInLeft 1s 1.5s backwards;
     }
 
     &-line {
@@ -46,7 +47,7 @@ body {}
       background-color: #fff;
       display: block;
       z-index: 1;
-      animation: slideOut 0.75s ease 1.75s;
+      animation: slideOut 0.75s ease 2.25s;
       animation-fill-mode: backwards;
     }
   }

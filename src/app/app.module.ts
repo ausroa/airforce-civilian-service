@@ -9,6 +9,13 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AfcsHomepageCarouselComponent } from './components/afcs-homepage-carousel/afcs-homepage-carousel.component';
 import { TileButtonsComponent } from './components/tile-buttons/tile-buttons.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
+import { Description1Component } from './components/description1/description1.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { Description2Component } from './components/description2/description2.component';
+import { VideoComponent } from './components/video/video.component';
+import { Description3Component } from './components/description3/description3.component';
+import { TileButtons2Component } from './components/tile-buttons2/tile-buttons2.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +23,14 @@ import { HomepageComponent } from './views/homepage/homepage.component';
     NavBarComponent,
     AfcsHomepageCarouselComponent,
     TileButtonsComponent,
-    HomepageComponent
+    HomepageComponent,
+    Description1Component,
+    SliderComponent,
+    Description2Component,
+    VideoComponent,
+    Description3Component,
+    TileButtons2Component,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
