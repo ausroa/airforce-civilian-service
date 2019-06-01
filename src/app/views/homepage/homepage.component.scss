@@ -1,3 +1,5 @@
+@import "abstracts/variables";
+
 .homepage-container {
   width: 100vw;
   display: grid;
@@ -10,7 +12,7 @@
   height: 30vw;
 }
 .homepage-description1 {
-  background-color: dodgerblue;
+  background-color: $afcs-blue;
   height: 49.6vw;
 }
 .homepage-slider {

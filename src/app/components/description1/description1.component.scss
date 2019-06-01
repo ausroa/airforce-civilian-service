@@ -1,0 +1,41 @@
+@import "abstracts/variables";
+
+.description {
+  position: relative;
+
+  &-box {
+    position: absolute;
+    height: 45vw;
+    width: 75vw;
+    left: 50vw;
+    top: 26vw;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2vw;
+  }
+
+  &-line {
+    height: 0.2vw;
+    width: 6vw;
+    position: relative;
+    background-color: #fff;
+    display: block;
+    left: 50%;
+    top: 1.5vw;
+    transform: translate(-50%);
+  }
+
+  &-title {
+    position: absolute;
+    left: 50%;
+    top: 4vw;
+    font-size: 3vw;
+    transform: translate(-50%);
+  }
+
+  &-text1,
+  &-text2 {
+    position: relative;
+    top: 10vw;
+  }
+}
