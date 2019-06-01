@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "base/animations";
 
 .tile-buttons-container {
   display: grid;
@@ -9,16 +10,23 @@
 }
 
 .tile-buttons {
-  border: 1px solid black;
   width: 20vw;
-  transition: all 1s ease;
+  transition: all .4s ease;
   cursor: pointer;
+  visibility: hidden;
+
+  @for $i from 1 to 6 {
+    &:nth-child(#{$i}) {
+      animation-fill-mode: backwards;
+      animation-delay: $i * 0.25s;
+    }
+  }
 
   &:hover {
-    width: 23.1vw;
-    transform: translateY(-0.05vw) scale(1.05);
+    padding-right: 23.1vw;
+    margin-right: 1vw;
+    transform: translateY(-0.2vw) scale(1.03);
     box-shadow: 5px 5px 10px #000;
-    overflow: visible !important;
   }
 
   &:hover &-line {
@@ -38,7 +46,7 @@
 
   &-box {
     margin-left: 2vw;
-    position: absolute;
+    position: relative;
     top: 11vw;
   }
 
@@ -47,6 +55,7 @@
     white-space: nowrap;
     color: #fff;
     font-size: 1.5vw;
+    backface-visibility: hidden;
   }
 
   &-line {
@@ -54,6 +63,12 @@
     width: 0;
     background-color: #fff;
     display: block;
-    transition: width 0.5s ease-out;
+    transition: width 0.4s ease-out;
   }
 }
+
+.showButtons {
+  animation: moveInBottom 1s ease;
+  visibility: visible;
+}
+

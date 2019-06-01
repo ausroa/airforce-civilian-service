@@ -31,6 +31,24 @@ body {}
     color: #fff;
     font-size: 4vw;
     text-shadow: 5px 5px 10px #000;
+    line-height: 3.5vw;
+    animation: moveInLeft 1s ease-out 0.75s backwards;
+
+    &:nth-child(3) {
+      font-size: 2.6vw;
+      margin-top: 2vw;
+    }
+
+    &-line {
+      margin-top: 2vw;
+      height: 0.2vw;
+      width: 4vw;
+      background-color: #fff;
+      display: block;
+      z-index: 1;
+      animation: slideOut 0.75s ease 1.75s;
+      animation-fill-mode: backwards;
+    }
   }
 
   &-inner {

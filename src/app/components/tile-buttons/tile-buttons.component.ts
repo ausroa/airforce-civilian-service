@@ -1,5 +1,4 @@
-import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'afcs-tile-buttons',
@@ -17,8 +16,20 @@ export class TileButtonsComponent implements OnInit {
 
   @ViewChild('tileButton') tileButton: any;
 
+  showTiles = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  showTileButtons() {
+    const tileButtonLocation = 200;
+    const scrollPosition = window.pageYOffset;
+
+    if(scrollPosition === tileButtonLocation) {
+      this.showTiles = true;
+    }
   }
 }

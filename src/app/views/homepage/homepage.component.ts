@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'afcs-homepage',
@@ -12,4 +12,5 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Scroll location for tile buttons = 1007
 }
