@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'afcs-tile-buttons',
   templateUrl: './tile-buttons.component.html',
-  styleUrls: ['./tile-buttons.component.scss']
+  styleUrls: ['./tile-buttons.component.scss'],
 })
 export class TileButtonsComponent implements OnInit {
   tileButtons: any[] = [
-    {title: ''},
-    {title: ''},
-    {title: ''},
-    {title: ''},
-    {title: ''}
+    {title: 'dod lab day', url: 'assets/imgs/slidesDOBLabDay.png'},
+    {title: 'directorates', url: 'assets/imgs/slidesDirectories.png'},
+    {title: 'about us', url: 'assets/imgs/slidesAboutUs.png'},
+    {title: 'opportunities', url: 'assets/imgs/slidesOppurtunities.png'},
+    {title: 'contact', url: 'assets/imgs/slidesContact.png'}
   ];
+
+  @ViewChild('tileButton') tileButton: any;
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

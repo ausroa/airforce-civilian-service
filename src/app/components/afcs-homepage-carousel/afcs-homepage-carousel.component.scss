@@ -3,10 +3,9 @@
 @import "base/animations";
 
 .carousel-box {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: relative;
   background-color: $afcs-blue-transparent;
+  height: 49.6vw;
 
   &-logo {
     position: absolute;

@@ -1,15 +1,59 @@
 @import "abstracts/variables";
 
-.tile-buttons {
-  z-index: 2;
+.tile-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   position: relative;
-  top: -2rem;
+  height: 100%;
+  background-color: $afcs-blue;
+}
 
-  &-button {
-    display: inline-block;
-    height: 30vw;
-    width: 20%;
+.tile-buttons {
+  border: 1px solid black;
+  width: 20vw;
+  transition: all 1s ease;
+  cursor: pointer;
+
+  &:hover {
+    width: 23.1vw;
+    transform: translateY(-0.05vw) scale(1.05);
+    box-shadow: 5px 5px 10px #000;
+    overflow: visible !important;
+  }
+
+  &:hover &-line {
+    width: 6vw;
+  }
+
+  &:active {
+    transform: translateY(-0.1vw);
+    box-shadow: 5px 5px 5px #000;
+  }
+
+  &-img {
+    position: absolute;
+    width: 23.1vw;
     background-color: $afcs-blue;
-    border: 1px solid white;
+  }
+
+  &-box {
+    margin-left: 2vw;
+    position: absolute;
+    top: 11vw;
+  }
+
+  &-title {
+    display: block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 1.5vw;
+  }
+
+  &-line {
+    height: 0.2vw;
+    width: 0;
+    background-color: #fff;
+    display: block;
+    transition: width 0.5s ease-out;
   }
 }
