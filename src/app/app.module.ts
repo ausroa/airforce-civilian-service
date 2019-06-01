@@ -16,6 +16,7 @@ import { VideoComponent } from './components/video/video.component';
 import { Description3Component } from './components/description3/description3.component';
 import { TileButtons2Component } from './components/tile-buttons2/tile-buttons2.component';
 import { RegisterComponent } from './components/register/register.component';
+import {SwiperModule} from 'angular2-useful-swiper';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

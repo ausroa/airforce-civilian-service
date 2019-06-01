@@ -46,6 +46,18 @@
   }
 }
 
+@keyframes moveInBottom2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
