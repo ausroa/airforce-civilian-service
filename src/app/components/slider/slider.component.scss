@@ -1,0 +1,37 @@
+.slider {
+  position: relative;
+  width: 50%;
+  height: 30vw;
+  display: flex;
+  //overflow-x: auto;
+  left: 50%;
+  top: 15vw;
+  transform: translate(-50%, -50%);
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  &-slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    border: 1px solid white;
+    scroll-snap-align: start;
+
+    //&:first-child {
+    //  width: 25%;
+    //  background-color: #fff;
+    //}
+  }
+
+  &-nav {
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+
+    &-links {
+      color: #fff;
+      font-size: 0.7vw;
+    }
+  }
+}

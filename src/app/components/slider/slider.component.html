@@ -1,3 +1,13 @@
-<p>
-  slider works!
-</p>
+<div class="slider">
+  <!--<div class="slider-slide"></div>-->
+  <div *ngFor="let slide of slides; index as i" id="slide-{{i + 1}}" class="slider-slide">
+    <h1>Slide: {{i + 1}}</h1>
+  </div>
+</div>
+<div class="slider-nav">
+  <a (click)="stopJump($event)" *ngFor="let slide of slides index as i" href="#slide-{{i + 1}}" class="slider-nav-links">
+    Slide {{i + 1}} Link
+  </a>
+</div>
+
+

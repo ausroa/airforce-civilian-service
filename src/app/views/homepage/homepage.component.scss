@@ -6,36 +6,46 @@
 }
 
 .homepage-carousel {
+  position: relative;
   height: 49.6vw;
 }
 .homepage-tile-btns {
+  position: relative;
   height: 30vw;
 }
 .homepage-description1 {
+  position: relative;
   background-color: $afcs-blue;
   height: 49.6vw;
 }
 .homepage-slider {
+  position: relative;
   background-color: blueviolet;
-  height: 25vw;
+  height: 30vw;
+  overflow-x: auto;
 }
 .homepage-description2 {
+  position: relative;
   background-color: aquamarine;
   height: 27vw;
 }
 .homepage-video {
+  position: relative;
   background-color: brown;
   height: 49.6vw;
 }
 .homepage-description3 {
+  position: relative;
   background-color: chartreuse;
   height: 45vw;
 }
 .homepage-tile-btns2 {
+  position: relative;
   background-color: darkslateblue;
   height: 25vw;
 }
 .homepage-register {
+  position: relative;
   background-color: forestgreen;
   height: 20vw;
 }
