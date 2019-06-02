@@ -27,7 +27,15 @@
     width: 1vw;
     height: 1vw;
     background-color: white;
-    top: -2vw;
+    top: 12vw;
+    left: 22vw;
+  }
+
+  &-nav-container {
+    position: absolute;
+    display: block;
+    height: 1vw;
+    top: 0;
   }
 
   &-bubble {
