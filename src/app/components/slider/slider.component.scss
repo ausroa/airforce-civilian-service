@@ -2,11 +2,16 @@
 @import "abstracts/mixins";
 @import "base/animations";
 
+.swiper-container {
+  background-color: $afcs-blue;
+  height: 100%;
+}
+
 .swiper {
   position: relative;
   top: 14.6vw;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: translate(-50%, -50%);
 
   &-wrapper {
     width: 100vw;
@@ -21,14 +26,6 @@
     &-img {
       width: 100%;
     }
-  }
-
-  &-pagination {
-    width: 1vw;
-    height: 1vw;
-    background-color: white;
-    top: 12vw;
-    left: 22vw;
   }
 
   &-nav-container {

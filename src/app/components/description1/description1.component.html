@@ -1,8 +1,8 @@
-<div *ngIf="startType" class="description">
+<div class="description">
   <div class="description-box">
     <h1 class="description-title">Lorem ipsum dolor sit.</h1>
     <div class="description-line"></div>
-    <div [ngClass]="{'css-typing': startType}" class="description-text">
+    <div *ngIf="startType" [ngClass]="{'css-typing': startType}" class="description-text">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing gor wert wer.</p>
       <p>Ad aliquam architecto at commodi consectetur corporis delectus commo ter ret ewer.</p>
       <p>dicta dignissimos eligendi eos eum excepturi facilis, harum id harum morw suda sa.</p>

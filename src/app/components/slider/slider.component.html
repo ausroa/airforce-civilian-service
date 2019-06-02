@@ -1,11 +1,12 @@
-<swiper *ngIf="slideUp" [config]="config" class="swiper" #swiper>
-  <div class="swiper-wrapper">
-    <div [ngClass]="{'slideUp': slideUp}" *ngFor="let slide of slides; index as i" class="swiper-slide" id="slide-{{i + 1}}">
-      <img class="swiper-slide-img" src="{{slide.url}}" alt="">
-      <span [ngClass]="{'active-img': bubble.id === slide.id}" class="swiper-bubble" *ngFor="let bubble of slides"></span>
+<div class="swiper-container">
+  <swiper *ngIf="slideUp" [config]="config" class="swiper" #swiper>
+    <div class="swiper-wrapper">
+      <div [ngClass]="{'slideUp': slideUp}" *ngFor="let slide of slides; index as i" class="swiper-slide" id="slide-{{i + 1}}">
+        <img class="swiper-slide-img" src="{{slide.url}}" alt="">
+        <span [ngClass]="{'active-img': bubble.id === i}" class="swiper-bubble" *ngFor="let bubble of slides"></span>
+      </div>
     </div>
-  </div>
-</swiper>
-
+  </swiper>
+</div>
 
 
