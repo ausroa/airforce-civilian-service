@@ -83,3 +83,13 @@
     width: 4vw;
   }
 }
+
+@keyframes slideOutFull {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 6vw;
+  }
+}

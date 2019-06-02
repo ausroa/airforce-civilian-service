@@ -1,0 +1,52 @@
+@import "base/animations";
+
+.description2 {
+  position: relative;
+
+  &-container {
+    position: absolute;
+    height: 0vw;
+    width: 75vw;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5vw;
+  }
+
+  &-text {
+    position: relative;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%);
+    font-family: monospace;
+  }
+
+  &-line {
+    height: 0.2vw;
+    width: 6vw;
+    position: relative;
+    background-color: #fff;
+    display: block;
+    left: 50%;
+    top: 21vw;
+    transform: translate(-50%);
+  }
+}
+
+.slideOut {
+  animation: slideOutFull 1s ease;
+}
+
+.moveInRight {
+  animation: slideTextOutRight 1s ease;
+}
+
+@keyframes slideTextOutRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

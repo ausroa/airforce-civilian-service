@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'afcs-tile-buttons',
