@@ -11,12 +11,11 @@ export class VideoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('Video Location: ', window.pageYOffset);
   }
 
   @HostListener('window:scroll', ['$event'])
   showComponent() {
-    const componentLocation = 3400;
+    const componentLocation = 3500;
     if(window.pageYOffset === componentLocation) {
       this.startVideo = true;
     }

@@ -15,7 +15,7 @@ export class Description1Component implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   startTyping() {
-    const componentLocation = 700;
+    const componentLocation = 900;
     if(window.pageYOffset === componentLocation) {
       this.startType = true;
     }

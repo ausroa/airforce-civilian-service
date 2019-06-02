@@ -1,0 +1,168 @@
+@import "abstracts/variables";
+
+.description {
+  position: relative;
+  height: 100%;
+
+  &-box {
+    position: relative;
+    height: 45vw;
+    width: 75vw;
+    left: 50vw;
+    top: 26vw;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5vw;
+  }
+
+  &-line {
+    height: 0.2vw;
+    width: $description-line-w;
+    position: relative;
+    background-color: #fff;
+    display: block;
+    left: 50%;
+    top: -3.5vw;
+    transform: translate(-50%);
+
+    &:last-child {
+      //left: 50%;
+      top: 11.5vw;
+    }
+  }
+
+  &-title {
+    position: absolute;
+    left: 50%;
+    top: 2vw;
+    font-size: 3vw;
+    transform: translate(-50%);
+    font-family: monospace;
+  }
+
+  &-text {
+    position: relative;
+    top: 7vw;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%);
+
+    & p {
+      text-shadow: 5px 5px 10px #000;
+    }
+  }
+}
+
+.css-typing p {
+  font-family: monospace;
+  font-size: 1.5vw;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block !important;
+}
+.css-typing p:nth-child(1) {
+  animation: type 2s steps(40, end);
+}
+
+.css-typing p:nth-child(2) {
+  animation: type 2s steps(40, end) 2s backwards;
+}
+
+.css-typing p:nth-child(3) {
+  animation: type 2s steps(40, end) 4s backwards;
+}
+
+.css-typing p:nth-child(4) {
+  animation: type 2s steps(40, end) 6s backwards;
+}
+
+.css-typing p:nth-child(5) {
+  animation: type 2s steps(40, end) 8s backwards;
+}
+
+.css-typing p:nth-child(6) {
+  margin-bottom: 2.5vw;
+  animation: type 2s steps(40, end) 10s backwards;
+}
+
+.css-typing p:nth-child(7) {
+  animation: type 2s steps(40, end) 12s backwards;
+}
+
+.css-typing p:nth-child(8) {
+  animation: type 2s steps(40, end) 14s backwards;
+}
+
+.css-typing p:nth-child(9) {
+  animation: type 2s steps(40, end) 16s backwards;
+}
+
+.css-typing p:nth-child(10) {
+  animation: type 2s steps(40, end) 18s backwards;
+}
+
+.css-typing p:nth-child(11) {
+  animation: type 2s steps(40, end) 20s backwards;
+}
+
+.css-typing p:nth-child(12) {
+  animation: type 0.5s steps(10, end) 22s backwards;
+}
+
+.slideOut {
+  animation: slideOutFull 1s ease;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    border-right: .15em solid orange;
+  }
+
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    width: 100%;
+    border: none;
+  }
+}
+
+@keyframes typeLast {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    border-right: .15em solid orange;
+  }
+
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    width: 15.5vw;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

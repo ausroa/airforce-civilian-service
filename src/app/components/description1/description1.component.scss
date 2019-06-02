@@ -8,7 +8,7 @@
     height: 45vw;
     width: 75vw;
     left: 50vw;
-    top: 26vw;
+    top: 32vw;
     transform: translate(-50%, -50%);
     color: #fff;
     font-size: 1.5vw;
@@ -16,12 +16,12 @@
 
   &-line {
     height: 0.2vw;
-    width: 6vw;
+    width: $description-line-w;
     position: relative;
     background-color: #fff;
     display: block;
     left: 50%;
-    top: 0.5vw;
+    top:-3.5vw;
     transform: translate(-50%);
   }
 
