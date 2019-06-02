@@ -1,4 +1,4 @@
-<swiper [config]="config" class="swiper" #swiper>
+<swiper *ngIf="slideUp" [config]="config" class="swiper" #swiper>
   <div class="swiper-wrapper">
     <div [ngClass]="{'slideUp': slideUp}" *ngFor="let slide of slides; index as i" class="swiper-slide" id="slide-{{i + 1}}">
       <img class="swiper-slide-img" src="{{slide.url}}" alt="">
