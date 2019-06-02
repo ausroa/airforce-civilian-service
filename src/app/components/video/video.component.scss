@@ -6,7 +6,7 @@
   &-player {
     height: 49.6vw;
     width: 100vw;
-    animation: flyVideoIn 1.5s ease-out;
+    animation: flyVideoIn 1s ease-out;
     box-shadow: 5px 5px 10px #000;
   }
 }
@@ -14,17 +14,17 @@
 @keyframes flyVideoIn {
   0% {
     opacity: 0;
-    transform: translate(50%, 50%) scale(0);
+    transform: scale(0);
     box-shadow: 0px 0px 0px $afcs-blue;
   }
 
-  80% {
-    transform: translate(-10%, -10%);
-  }
+  //80% {
+  //  transform: translate(-10%, -10%);
+  //}
 
   100% {
     opacity: 1;
-    transform: translate(0) scale(1);
+    transform: scale(1);
     box-shadow: 0px 0px 0px $afcs-blue;
   }
 }

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TileButtons2Component implements OnInit {
   tileButtons: any[] = [
-    {title: 'News'},
-    {title: 'Events'}
+    {title: 'News', img: 'assets/imgs/lowerNEWS.png'},
+    {title: 'Events', img: 'assets/imgs/lowerEVENTS.png'}
   ];
 
   constructor() { }
