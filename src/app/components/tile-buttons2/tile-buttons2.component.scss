@@ -1,0 +1,31 @@
+.tile-buttons {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  &-btn {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border: 1px solid white;
+    position: relative;
+  }
+
+  &-title {
+    position: absolute;
+    top: 35%;
+
+    &-text {
+      font-size: 2.5vw;
+      color: white;
+    }
+  }
+
+  &-line {
+    width: 15vw;
+    height: .2vw;
+    background-color: white;
+  }
+}

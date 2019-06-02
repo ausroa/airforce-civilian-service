@@ -2,15 +2,18 @@
 @import "base/animations";
 
 .tile-buttons-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  //display: grid;
+  //grid-template-columns: repeat(5, 1fr);
   position: relative;
   height: 100%;
   background-color: $afcs-blue;
+  white-space: nowrap;
 }
 
 .tile-buttons {
-  width: 20vw;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
   transition: all .5s ease;
   cursor: pointer;
   visibility: hidden;
@@ -24,9 +27,8 @@
   }
 
   &:hover {
-    padding-right: 23.1vw;
-    width: 23.1vw;
     margin-right: 1vw;
+    width: 23.1vw;
     transform: translateY(-0.2vw);
     box-shadow: 5px 5px 10px #000;
     overflow: visible;

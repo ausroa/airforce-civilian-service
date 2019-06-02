@@ -1,3 +1,8 @@
-<p>
-  tile-buttons2 works!
-</p>
+<div class="tile-buttons">
+  <div *ngFor="let tile of tileButtons" class="tile-buttons-btn">
+    <div class="tile-buttons-title">
+      <p class="tile-buttons-title-text">{{tile.title}}</p>
+      <div class="tile-buttons-line"></div>
+    </div>
+  </div>
+</div>
