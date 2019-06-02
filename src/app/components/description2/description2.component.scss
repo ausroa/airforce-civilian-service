@@ -19,6 +19,8 @@
     width: 70vw;
     transform: translate(-50%);
     font-family: monospace;
+    font-size: 1.5vw;
+    line-height: 3vw;
   }
 
   &-line {
@@ -28,7 +30,7 @@
     background-color: #fff;
     display: block;
     left: 50%;
-    top: 21vw;
+    top: 22vw;
     transform: translate(-50%);
   }
 }
