@@ -33,12 +33,13 @@
     transition: $search-transition;
 
     &:hover {
-      transform: translateY(-0.2rem);
+      transform: translateY(-0.2vw);
       box-shadow: 5px 5px 10px #000;
+      z-index: 2;
     }
 
     &:active {
-      transform: translateY(-0.1rem);
+      transform: translateY(-0.1vw);
       box-shadow: 5px 5px 5px #000;
     }
 

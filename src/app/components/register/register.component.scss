@@ -1,0 +1,47 @@
+.register {
+  position: relative;
+  height: 100%;
+
+  &-text-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &-text {
+    color: #fff;
+    font-size: 1.5vw;
+  }
+
+  &-btn {
+    display: inline-block;
+    color: #eee;
+    width: 10vw;
+    padding: .5vw 0 .5vw 0;
+    font-size: 1vw;
+    position: relative;
+    top: 1vw;
+    background-color: dodgerblue;
+    transition: all .5s ease;
+    text-decoration: none;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+    &:last-child {
+      margin-left: 1vw;
+    }
+
+    &:hover {
+      transform: translateY(-.2vw);
+      box-shadow: 5px 5px 10px #000;
+    }
+
+    &:active {
+      transform: translateY(-.1vw);
+      box-shadow: 5px 5px 5px #000;
+    }
+  }
+}
