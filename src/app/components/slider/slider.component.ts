@@ -33,7 +33,7 @@ export class SliderComponent implements OnInit{
     const componentLocation = 2000;
     const windowLocation = window.pageYOffset;
 
-    if(windowLocation === componentLocation) {
+    if(windowLocation >= componentLocation) {
       this.slideUp = true;
     }
   }

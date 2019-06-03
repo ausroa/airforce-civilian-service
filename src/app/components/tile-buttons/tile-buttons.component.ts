@@ -28,7 +28,7 @@ export class TileButtonsComponent implements OnInit {
     const tileButtonLocation = 200;
     const scrollPosition = window.pageYOffset;
 
-    if(scrollPosition === tileButtonLocation) {
+    if(scrollPosition > tileButtonLocation) {
       this.showTiles = true;
     }
   }

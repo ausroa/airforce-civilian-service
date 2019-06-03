@@ -16,7 +16,7 @@ export class VideoComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   showComponent() {
     const componentLocation = 3500;
-    if(window.pageYOffset === componentLocation) {
+    if(window.pageYOffset >= componentLocation) {
       this.startVideo = true;
     }
   }

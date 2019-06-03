@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'afcs-tile-buttons2',
@@ -11,9 +11,19 @@ export class TileButtons2Component implements OnInit {
     {title: 'Events', img: 'assets/imgs/lowerEVENTS.png'}
   ];
 
+  slideIn = false;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(window.pageYOffset);
   }
 
+  @HostListener('window:scroll', ['$event'])
+  slideTiles2In() {
+    const componentLocation = 5276;
+    if(window.pageYOffset >= componentLocation) {
+      this.slideIn = true;
+    }
+  }
 }

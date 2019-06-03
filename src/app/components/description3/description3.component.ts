@@ -17,7 +17,7 @@ export class Description3Component implements OnInit {
   @HostListener('window:scroll', ['$event'])
   startType() {
     const componentLocation = 4400;
-    if(window.pageYOffset === componentLocation) {
+    if(window.pageYOffset >= componentLocation) {
       this.startType3 = true;
     }
   }

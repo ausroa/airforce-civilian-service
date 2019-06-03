@@ -16,7 +16,7 @@ export class Description2Component implements OnInit {
   @HostListener('window:scroll', ['$event'])
   slideOutLine() {
     const componentLocation = 2700;
-    if(window.pageYOffset === componentLocation) {
+    if(window.pageYOffset >= componentLocation) {
       this.slideOut = true;
     }
   }

@@ -10,12 +10,41 @@
     width: 50%;
     height: 100%;
     position: relative;
-    //overflow: hidden;
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    animation: slideTile2TilesLeft 1s ease-out;
+
+    &:last-child {
+      animation: slideTile2TilesRight 1s ease-out;
+    }
 
     &:hover {
-      animation: hoverButton 1s ease-out;
-      transform: translateY(-0.02vw);
+      transform: translateY(-0.5vw);
+      box-shadow: 5px 5px 10px #000;
+    }
+
+    &:active {
+      transform: translateY(-0.4vw);
+      box-shadow: 5px 5px 5px #000;
+    }
+
+    &:hover &-line {
+      width: 15vw;
+    }
+
+    &-text {
+      font-size: 2.5vw;
+      color: white;
+      text-shadow: 5px 5px 10px #000;
+    }
+
+    &-line {
+      width: 0;
+      height: .2vw;
+      background-color: #fff;
+      position: absolute;
+      left: -1vw;
+      transition: all .5s ease-out;
     }
   }
 
@@ -23,18 +52,6 @@
     position: absolute;
     top: 35%;
     left: 5%;
-
-    &-text {
-      font-size: 2.5vw;
-      color: white;
-      text-shadow: 5px 5px 10px #000;
-    }
-  }
-
-  &-line {
-    width: 15vw;
-    height: .2vw;
-    background-color: white;
   }
 
   &-img {
@@ -44,10 +61,35 @@
   }
 }
 
-@keyframes hoverButton {
+@keyframes slideTile2Line {
   0% {
+    width: 0;
   }
 
   100% {
+    width: 15vw;
+  }
+}
+
+@keyframes slideTile2TilesLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideTile2TilesRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
