@@ -7,6 +7,11 @@
   background-color: #2b2e37;
   position: relative;
 
+  a {
+    color: white;
+    font-size: 0.6vw;
+  }
+
   &-col1,
   &-col2,
   &-col3,
@@ -51,9 +56,7 @@
   top: -2vw;
 
   &-links {
-    color: white;
     display: block;
-    font-size: 0.6vw;
     position: relative;
   }
 }
@@ -63,9 +66,7 @@
   display: block;
 
   &-links {
-    color: white;
     display: block;
-    font-size: 0.6vw;
   }
 
   &-line {
