@@ -5,6 +5,7 @@
   grid-column-gap: 5vw;
   line-height: 1.5vw;
   background-color: #2b2e37;
+  position: relative;
 
   &-col1,
   &-col2,
@@ -153,8 +154,24 @@
   }
 }
 
+.official-text {
+  position: absolute;
+  left: 8vw;
+  font-size: 0.7vw;
+  top: 28vw;
+
+  &-text {
+    color: #eee;
+  }
+}
+
 .bottom-bar {
   grid-column: 4;
   height: 3vw;
   background-color: white;
+
+  &-img {
+    width: 4vw;
+    mix-blend-mode: multiply;
+  }
 }
