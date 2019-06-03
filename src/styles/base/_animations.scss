@@ -34,6 +34,7 @@
 
 @keyframes moveInBottom {
   0% {
+    z-index: -1;
     opacity: 0;
     transform: translateY(10vw);
   }
@@ -43,6 +44,7 @@
   }
 
   100% {
+    z-index: -1;
     opacity: 1;
     transform: translateY(0);
   }
@@ -50,11 +52,13 @@
 
 @keyframes moveInBottom2 {
   0% {
+    z-index: -1;
     opacity: 0;
     transform: translateY(10vw);
   }
 
   100% {
+    z-index: -1;
     opacity: 1;
     transform: translateY(0);
   }

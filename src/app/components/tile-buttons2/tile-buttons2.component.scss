@@ -72,11 +72,13 @@
 
 @keyframes slideTile2TilesLeft {
   0% {
+    z-index: -1;
     opacity: 0;
     transform: translateX(-50%);
   }
 
   100% {
+    z-index: -1;
     opacity: 1;
     transform: translateX(0);
   }
@@ -85,11 +87,13 @@
 
 @keyframes slideTile2TilesRight {
   0% {
+    z-index: -1;
     opacity: 0;
     transform: translateX(50%);
   }
 
   100% {
+    z-index: -1;
     opacity: 1;
     transform: translateX(0);
   }
