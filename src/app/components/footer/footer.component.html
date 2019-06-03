@@ -1,0 +1,51 @@
+<div class="footer">
+  <div class="footer-col1">
+    <div class="footer-col1-box">
+      <div class="home">
+        <h4>HOME</h4>
+        <a *ngFor="let link of homeLinks" class="home-links" href="">{{link.title}}</a>
+      </div>
+      <div class="about">
+        <h4>ABOUT US</h4>
+        <a *ngFor="let link of aboutLinks" class="about-links" href="">{{link.title}}</a>
+        <div class="about-line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-col2">
+    <div class="footer-col2-box">
+      <div class="careers">
+        <h4>CAREERS</h4>
+        <a class="careers-links" *ngFor="let link of careerLinks" href="">{{link.title}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-col3">
+    <div class="footer-col3-box">
+      <div class="find-job">
+        <h4>FIND A JOB</h4>
+        <a class="find-job-links" *ngFor="let link of findJobLinks" href="">{{link.title}}</a>
+      </div>
+      <div class="contact-us">
+        <h4>CONTACT US</h4>
+        <a class="contact-us-links" *ngFor="let link of contactUsLinks" href="">{{link.title}}</a>
+      </div>
+      <div class="social">
+        <h4>SOCIAL</h4>
+        <a class="social-links" *ngFor="let link of socialLinks" href="">{{link.title}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-col4">
+    <div class="footer-col4-box">
+      <div class="last-col">
+        <a class="last-col-links" *ngFor="let link of lastColLinks" href="">{{link.title}}</a>
+        <img class="last-col-img" src="assets/imgs/lowerMenuLogo.png" alt="">
+        <div class="last-col-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-bar">
+  <img class="bottom-bar-img" src="" alt="">
+</div>

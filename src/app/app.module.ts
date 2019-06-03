@@ -17,6 +17,7 @@ import { Description3Component } from './components/description3/description3.co
 import { TileButtons2Component } from './components/tile-buttons2/tile-buttons2.component';
 import { RegisterComponent } from './components/register/register.component';
 import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
     VideoComponent,
     Description3Component,
     TileButtons2Component,
-    RegisterComponent
+    RegisterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

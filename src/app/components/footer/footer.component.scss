@@ -1,0 +1,160 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 30vw;
+  grid-column-gap: 5vw;
+  line-height: 1.5vw;
+  background-color: #2b2e37;
+
+  &-col1,
+  &-col2,
+  &-col3,
+  &-col4 {
+    height: 100%;
+    width: 100%;
+    color: white;
+  }
+
+  &-col1-box {
+    position: relative;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-col2-box {
+    position: relative;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-col3-box {
+    position: relative;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-col4-box {
+    position: relative;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.home {
+  position: relative;
+  display: block;
+  top: -2vw;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+    position: relative;
+  }
+}
+
+.about {
+  position: relative;
+  display: block;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+  }
+
+  &-line {
+    display: block;
+    position: relative;
+    height: .2vw;
+    width: 6.5vw;
+    background-color: white;
+    top: 2vw;
+  }
+}
+
+.careers {
+  position: relative;
+  display: block;
+  top: -2vw;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+  }
+}
+
+.find-job {
+  position: relative;
+  display: block;
+  top: -3vw;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+  }
+}
+
+.contact-us {
+  position: relative;
+  display: block;
+  top: -1vw;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+  }
+}
+
+.social {
+  position: relative;
+  display: block;
+  top: 1vw;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+  }
+}
+
+.last-col {
+  position: relative;
+  display: block;
+  top: -4vw;
+
+  &-links {
+    color: white;
+    display: block;
+    font-size: 0.6vw;
+  }
+
+  &-img {
+    position: relative;
+    width: 5vw;
+    top: 5.5vw;
+  }
+
+  &-line {
+    display: block;
+    position: relative;
+    height: .2vw;
+    width: 6.5vw;
+    background-color: white;
+    top: 7.5vw;
+    left: -0.5vw;
+  }
+}
+
+.bottom-bar {
+  grid-column: 4;
+  height: 3vw;
+  background-color: white;
+}
