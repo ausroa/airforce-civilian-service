@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-slider',
@@ -28,19 +29,19 @@ export class SliderComponent implements OnInit{
 
   @ViewChild('swiper') swiper: any;
 
+  private componentTriggerY = 2000;
+
+  constructor(private windowService: WindowService) { }
+
+  ngOnInit() {
+    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
+    console.log('Slider Trigger LocationY;', this.componentTriggerY);
+  }
+
   @HostListener('window:scroll', ['$event'])
   showSwiper() {
-    const componentLocation = 2000;
-    const windowLocation = window.pageYOffset;
-
-    if(windowLocation >= componentLocation) {
+    if(window.pageYOffset >= this.componentTriggerY) {
       this.slideUp = true;
     }
   }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-description3',
@@ -8,16 +9,18 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class Description3Component implements OnInit {
   startType3 = false;
 
-  constructor() { }
+  constructor(private windowService: WindowService) { }
+
+  private componentTriggerY = 4400;
 
   ngOnInit() {
-    console.log(window.pageYOffset);
+    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
+    console.log('Description 3 Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])
   startType() {
-    const componentLocation = 4400;
-    if(window.pageYOffset >= componentLocation) {
+    if(window.pageYOffset >= this.componentTriggerY) {
       this.startType3 = true;
     }
   }

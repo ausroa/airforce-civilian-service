@@ -8,9 +8,11 @@
 
   &-logo {
     mix-blend-mode: multiply;
-    height: $nav-logo-height;
-    width: $nav-logo-width;
-    margin-left: 2.5rem;
+    //height: $nav-logo-height;
+    width: 10.4vw;
+    margin-left: 1.3vw;
+    opacity: 0;
+    animation: fadeLogoIn 2s ease forwards;
   }
 
   &-link {
@@ -148,6 +150,45 @@
     top: -1rem;
     padding: 2rem;
     cursor: pointer;
+  }
+}
+
+svg {
+  width: 7.74vw;
+  position: absolute;
+  z-index: 2;
+  height: 6vw;
+  left: 4vw;
+
+  g {
+    path {
+      fill: none !important;
+      stroke: rgb(26, 100, 166);
+      stroke-dasharray: 600;
+      animation: drawLogo 2s ease forwards;
+    }
+  }
+}
+
+@keyframes drawLogo {
+  0% {
+    visibility: visible;
+    stroke-dashoffset: 600;
+  }
+
+  100% {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeLogoIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

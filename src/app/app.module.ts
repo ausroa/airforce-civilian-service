@@ -18,6 +18,7 @@ import { TileButtons2Component } from './components/tile-buttons2/tile-buttons2.
 import { RegisterComponent } from './components/register/register.component';
 import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
 import { FooterComponent } from './components/footer/footer.component';
+import {InlineSVGModule} from 'ng-inline-svg';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    SwiperModule
+    SwiperModule,
+    InlineSVGModule
   ],
   providers: [],
   bootstrap: [AppComponent]

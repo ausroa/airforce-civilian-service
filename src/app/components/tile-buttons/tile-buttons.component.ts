@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-tile-buttons',
@@ -18,17 +19,18 @@ export class TileButtonsComponent implements OnInit {
 
   showTiles = false;
 
-  constructor() { }
+  private componentTriggerY = 200;
+
+  constructor(private windowService: WindowService) { }
 
   ngOnInit() {
+    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
+    console.log('Tile-buttons Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])
   showTileButtons() {
-    const tileButtonLocation = 200;
-    const scrollPosition = window.pageYOffset;
-
-    if(scrollPosition > tileButtonLocation) {
+    if(window.pageYOffset > this.componentTriggerY) {
       this.showTiles = true;
     }
   }

@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-video',
@@ -8,15 +9,18 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class VideoComponent implements OnInit {
   startVideo = false;
 
-  constructor() { }
+  private componentTriggerY = 3500;
+
+  constructor(private windowService: WindowService) { }
 
   ngOnInit() {
+    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
+    console.log('Video Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])
   showComponent() {
-    const componentLocation = 3500;
-    if(window.pageYOffset >= componentLocation) {
+    if(window.pageYOffset >= this.componentTriggerY) {
       this.startVideo = true;
     }
   }

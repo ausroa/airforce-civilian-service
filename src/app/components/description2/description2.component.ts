@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-description2',
@@ -8,15 +9,18 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class Description2Component implements OnInit {
   slideOut = false;
 
-  constructor() { }
+  constructor(private windowService: WindowService) { }
+
+  private componentTriggerY = 2700;
 
   ngOnInit() {
+    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
+    console.log('Description 2 Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])
   slideOutLine() {
-    const componentLocation = 2700;
-    if(window.pageYOffset >= componentLocation) {
+    if(window.pageYOffset >= this.componentTriggerY) {
       this.slideOut = true;
     }
   }
