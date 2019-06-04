@@ -1,0 +1,33 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // IE Hackiness =(
+
+  svg {
+    opacity: 0 !important;
+  }
+
+  .tile-buttons {
+    &:hover {
+      width: 23.1% !important;
+      margin-right: 0.5vw !important;
+    }
+
+    &:hover &-line {
+      width: 27% !important;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: inherit;
+  }
+
+  .tile-buttons2 {
+
+    &-btn {
+      &:hover &-line {
+        width: 250% !important;
+      }
+    }
+  }
+}
