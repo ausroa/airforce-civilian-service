@@ -1,17 +1,17 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {AfterContentChecked, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'afcs-homepage-carousel',
   templateUrl: './afcs-homepage-carousel.component.html',
   styleUrls: ['./afcs-homepage-carousel.component.scss']
 })
-export class AfcsHomepageCarouselComponent implements OnInit {
+export class AfcsHomepageCarouselComponent implements AfterContentChecked, OnInit {
+  @ViewChild('carousel') img: any;
+
   homepageCarouselImgs: any[] = [
     {url: 'assets/imgs/Directed Energy.jpg', id: 'ngb-slide-0'},
     {url: 'assets/imgs/home_1.jpg', id: 'ngb-slide-1'},
   ];
-
-  @ViewChild('carousel') img: any;
 
   carouselText: any[] = [
     {text: 'The Air Force'},
@@ -19,12 +19,20 @@ export class AfcsHomepageCarouselComponent implements OnInit {
     {text: 'Lead. Discover. Develop. Deliver'}
   ];
 
-  constructor() { }
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
-    if(this.img.activeId === undefined) {
-      this.img.activeId = 'ngb-slide-0';
+    this.img.slides = {};
+    this.img.slides.first = {};
+    this.img.slides.last = {};
+    if(this.img.slides.first.id === undefined) {
+      this.img.slides.first.id = this.homepageCarouselImgs[0].id;
     }
+    this.cd.detectChanges();
   }
 
+  ngAfterContentChecked() {
+    this.homepageCarouselImgs[0].id = this.img.slides.first.id;
+    this.homepageCarouselImgs[1].id = this.img.slides.last.id;
+  }
 }

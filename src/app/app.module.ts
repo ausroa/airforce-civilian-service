@@ -19,6 +19,7 @@ import { RegisterComponent } from './components/register/register.component';
 import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
 import { FooterComponent } from './components/footer/footer.component';
 import {InlineSVGModule} from 'ng-inline-svg';
+import { AboutPageComponent } from './views/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {InlineSVGModule} from 'ng-inline-svg';
     Description3Component,
     TileButtons2Component,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

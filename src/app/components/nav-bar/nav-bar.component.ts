@@ -23,7 +23,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     this.links = [
       {linkName: 'Home', url: ''},
-      {linkName: 'About', url: ''},
+      {linkName: 'About', url: 'about'},
       {linkName: 'Careers', url: ''},
       {linkName: 'Find A Job', url: ''},
       {linkName: 'Contact', url: ''},
@@ -32,7 +32,7 @@ export class NavBarComponent implements OnInit {
 
     this.isOpen = false;
 
-    $('.search-button').click(function(){
+    $('.search-button').click(function() {
       $(this).parent().toggleClass('open');
     });
   }
