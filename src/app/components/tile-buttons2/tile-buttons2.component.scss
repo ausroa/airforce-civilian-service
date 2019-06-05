@@ -1,3 +1,5 @@
+@import "base/animations";
+
 .tile-buttons2 {
   position: relative;
   display: inline-block;
@@ -51,6 +53,7 @@
     position: absolute;
     top: 35%;
     left: 5%;
+    animation: fadeTitleIn 1s ease;
   }
 
   &-img {
