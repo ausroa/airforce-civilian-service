@@ -64,37 +64,4 @@
   }
 }
 
-@keyframes slideTile2Line {
-  0% {
-    width: 0;
-  }
 
-  100% {
-    width: 15vw;
-  }
-}
-
-@keyframes slideTile2TilesLeft {
-  0% {
-    z-index: -1;
-    transform: translateX(-50%);
-  }
-
-  100% {
-    z-index: -1;
-    transform: translateX(0);
-  }
-}
-
-
-@keyframes slideTile2TilesRight {
-  0% {
-    z-index: -1;
-    transform: translateX(50%);
-  }
-
-  100% {
-    z-index: -1;
-    transform: translateX(0);
-  }
-}

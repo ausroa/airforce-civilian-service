@@ -109,16 +109,12 @@ body {
   transform: translate(-50%, -50%);
 
   rect {
-    stroke-dasharray: 750;
-    //stroke-dashoffset: -750;
     animation: draw-square 2s infinite;
     transform-origin: 50% 50%;
     z-index: -1;
   }
 
   polygon {
-    stroke-dasharray: 550;
-    //stroke-dashoffset: -550;
     animation: draw-hex 2s ease-in-out infinite;
     transform-origin: 50% 50%;
     z-index: -1;
@@ -176,75 +172,8 @@ body {
 
   g {
     path {
-      //stroke: black;
-      //stroke-dasharray: 600;
-      //stroke-dashoffset: 600;
       transform-origin: 50% 50%;
       animation: animateLogo 3s ease-in-out infinite;
     }
-  }
-}
-
-@keyframes draw-square {
-  0% {
-    //stroke-dashoffset: -750;
-    //transform: rotate(0deg);
-  }
-
-  50% {
-    //stroke-dashoffset: 0;
-    //transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate3d(0, 5, 0, 360deg);
-    //stroke-dashoffset: 750;
-  }
-}
-
-@keyframes draw-hex {
-  0% {
-    //stroke-dashoffset: -550;
-    //transform: rotate(0deg);
-  }
-
-  50% {
-    //stroke-dashoffset: 0;
-    //transform: rotate(180deg);
-    //transform: rotate(0deg);
-  }
-
-  100% {
-    //stroke-dashoffset: 550;
-    transform: rotate3d(0, 1, 0, 360deg);
-    //transform: rotate(720deg);
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes animateLogo {
-  0% {
-    //stroke-dashoffset: 600;
-    //opacity: 0;
-  }
-
-  50% {
-    //stroke-dashoffset: 0;
-    //opacity: 1;
-  }
-
-  100% {
-    transform: rotate3d(0, 1, 0, 360deg);
-    //stroke-dashoffset: -600;
-    //opacity: 0;
   }
 }

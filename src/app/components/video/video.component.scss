@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "base/animations";
 
 .video {
   height: 100%;
@@ -11,20 +12,3 @@
   }
 }
 
-@keyframes flyVideoIn {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-    box-shadow: 0px 0px 0px $afcs-blue;
-  }
-
-  //80% {
-  //  transform: translate(-10%, -10%);
-  //}
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: 0px 0px 0px $afcs-blue;
-  }
-}

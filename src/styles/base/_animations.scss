@@ -109,3 +109,166 @@
     opacity: 1;
   }
 }
+
+@keyframes draw-square {
+  100% {
+    transform: rotate3d(0, 5, 0, 360deg);
+  }
+}
+
+@keyframes draw-hex {
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateLogo {
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    border-right: .15em solid orange;
+  }
+
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    width: 100%;
+    border: none;
+  }
+}
+
+@keyframes typeLast {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    border-right: .15em solid orange;
+  }
+
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    width: 15.5vw;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+@keyframes slideTextOutRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes drawLogo {
+  0% {
+    visibility: visible;
+    stroke-dashoffset: 600;
+  }
+
+  100% {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeLogoIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideTile2Line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 15vw;
+  }
+}
+
+@keyframes slideTile2TilesLeft {
+  0% {
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    z-index: -1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideTile2TilesRight {
+  0% {
+    z-index: -1;
+    transform: translateX(50%);
+  }
+
+  100% {
+    z-index: -1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyVideoIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    box-shadow: 0px 0px 0px $afcs-blue;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0px 0px 0px $afcs-blue;
+  }
+}

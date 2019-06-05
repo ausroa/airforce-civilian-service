@@ -1,5 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+@import "base/animations";
 
 .nav {
   position: relative;
@@ -8,7 +9,6 @@
 
   &-logo {
     mix-blend-mode: multiply;
-    //height: $nav-logo-height;
     width: 10.4vw;
     margin-left: 1.3vw;
     opacity: 0;
@@ -170,25 +170,4 @@
   }
 }
 
-@keyframes drawLogo {
-  0% {
-    visibility: visible;
-    stroke-dashoffset: 600;
-  }
-
-  100% {
-    visibility: visible;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fadeLogoIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
