@@ -36,10 +36,11 @@ export class SliderComponent implements OnInit, AfterViewChecked {
   constructor(private windowService: WindowService, private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
+
     if(this.mySwiper === undefined) {
       return;
     }
-    this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
   }
 
   ngAfterViewChecked() {
