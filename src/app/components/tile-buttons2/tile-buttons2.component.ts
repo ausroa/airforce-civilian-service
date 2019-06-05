@@ -20,7 +20,6 @@ export class TileButtons2Component implements OnInit {
 
   ngOnInit() {
     this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
-    console.log('Tile-buttons 2 Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])

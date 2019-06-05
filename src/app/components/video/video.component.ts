@@ -15,7 +15,6 @@ export class VideoComponent implements OnInit {
 
   ngOnInit() {
     this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
-    console.log('Video Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])

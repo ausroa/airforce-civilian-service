@@ -15,7 +15,6 @@ export class Description3Component implements OnInit {
 
   ngOnInit() {
     this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
-    console.log('Description 3 Trigger LocationY:', this.componentTriggerY);
   }
 
   @HostListener('window:scroll', ['$event'])

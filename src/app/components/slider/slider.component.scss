@@ -37,22 +37,30 @@
     top: 0;
   }
 
-  &-bubble {
-    height: 0.5vw;
-    width: 0.5vw;
-    background-color: white;
-    border-radius: 50%;
-    @include inline-block;
-    //left: $c-text-left;
-    margin: 0 $c-bubble-w 0 0;
+  &-bubbles {
+    display: block;
     position: absolute;
-    top: 15vw;
-    //animation: moveInBottom 1s ease-out 0.75s backwards;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
 
-    @for $i from 1 to 8 {
-      &:nth-child(#{$i}) {
-        left: $i * 1vw;
-      }
+    &-bubble {
+      height: 0.5vw;
+      width: 0.5vw;
+      background-color: white;
+      border-radius: 50%;
+      @include inline-block;
+      //left: $c-text-left;
+      margin: 0 $c-bubble-w 0 0;
+      position: relative;
+      cursor: pointer;
+      //animation: moveInBottom 1s ease-out 0.75s backwards;
+
+      //@for $i from 1 to 10 {
+      //  &:nth-child(#{$i}) {
+      //    left: $i * 1vw;
+      //  }
+      //}
     }
   }
 }
