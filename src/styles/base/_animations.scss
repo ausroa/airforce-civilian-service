@@ -272,3 +272,13 @@
     box-shadow: 0px 0px 0px $afcs-blue;
   }
 }
+
+@keyframes slideSmallNavOut {
+  0% {
+    display: none;
+  }
+
+  100% {
+    display: block;
+  }
+}

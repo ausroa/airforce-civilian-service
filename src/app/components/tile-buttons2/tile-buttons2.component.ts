@@ -4,7 +4,7 @@ import {WindowService} from '../../services/window.service';
 @Component({
   selector: 'afcs-tile-buttons2',
   templateUrl: './tile-buttons2.component.html',
-  styleUrls: ['./tile-buttons2.component.scss']
+  styleUrls: ['../../../styles/components/tile-buttons2.component.scss']
 })
 export class TileButtons2Component implements OnInit {
   tileButtons: any[] = [

@@ -5,7 +5,7 @@ import {SwiperComponent} from 'angular2-useful-swiper';
 @Component({
   selector: 'afcs-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  styleUrls: ['../../../styles/components/slider.component.scss']
 })
 export class SliderComponent implements OnInit, AfterViewChecked {
   slides: any[] = [

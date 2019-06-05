@@ -5,7 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { NavBarComponent } from './components/global-components/nav-bar/nav-bar.component';
 import { AfcsHomepageCarouselComponent } from './components/afcs-homepage-carousel/afcs-homepage-carousel.component';
 import { TileButtonsComponent } from './components/tile-buttons/tile-buttons.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
@@ -17,7 +17,7 @@ import { Description3Component } from './components/description3/description3.co
 import { TileButtons2Component } from './components/tile-buttons2/tile-buttons2.component';
 import { RegisterComponent } from './components/register/register.component';
 import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './components/global-components/footer/footer.component';
 import {InlineSVGModule} from 'ng-inline-svg';
 import { AboutPageComponent } from './views/about-page/about-page.component';
 import { CareersPageComponent } from './views/careers-page/careers-page.component';

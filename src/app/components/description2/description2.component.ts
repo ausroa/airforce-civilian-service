@@ -4,7 +4,7 @@ import {WindowService} from '../../services/window.service';
 @Component({
   selector: 'afcs-description2',
   templateUrl: './description2.component.html',
-  styleUrls: ['./description2.component.scss']
+  styleUrls: ['../../../styles/components/description2.component.scss']
 })
 export class Description2Component implements OnInit {
   slideOut = false;

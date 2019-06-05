@@ -4,7 +4,7 @@ import {WindowService} from '../../services/window.service';
 @Component({
   selector: 'afcs-video',
   templateUrl: './video.component.html',
-  styleUrls: ['./video.component.scss']
+  styleUrls: ['../../../styles/components/video.component.scss']
 })
 export class VideoComponent implements OnInit {
   startVideo = false;

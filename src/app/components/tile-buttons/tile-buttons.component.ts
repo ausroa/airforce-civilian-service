@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'afcs-tile-buttons',
   templateUrl: './tile-buttons.component.html',
-  styleUrls: ['./tile-buttons.component.scss'],
+  styleUrls: ['../../../styles/components/tile-buttons.component.scss'],
 })
 export class TileButtonsComponent implements OnInit {
   tileButtons: any[] = [

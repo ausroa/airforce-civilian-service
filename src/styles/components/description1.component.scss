@@ -1,16 +1,15 @@
-@import "abstracts/variables";
-@import "base/animations";
+@import "../abstracts/variables";
+@import "../base/animations";
 
 .description {
   position: relative;
-  height: 100%;
 
   &-box {
-    position: relative;
+    position: absolute;
     height: 45vw;
     width: 75vw;
     left: 50vw;
-    top: 26vw;
+    top: 32vw;
     transform: translate(-50%, -50%);
     color: #fff;
   }
@@ -22,12 +21,8 @@
     background-color: #fff;
     display: block;
     left: 50%;
-    top: -3.5vw;
+    top:-3.5vw;
     transform: translate(-50%);
-
-    &:last-child {
-      top: 11.5vw;
-    }
   }
 
   &-title {
@@ -107,9 +102,10 @@
 }
 
 .css-typing p:nth-child(12) {
-  animation: type 0.5s steps(10, end) 22s backwards;
+  animation: typeLast 0.5s steps(10, end) 22s backwards;
 }
 
 .slideOut {
   animation: slideOutFull 1s ease;
 }
+

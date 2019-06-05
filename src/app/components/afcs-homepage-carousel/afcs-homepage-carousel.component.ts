@@ -3,7 +3,7 @@ import {AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild} fr
 @Component({
   selector: 'afcs-homepage-carousel',
   templateUrl: './afcs-homepage-carousel.component.html',
-  styleUrls: ['./afcs-homepage-carousel.component.scss']
+  styleUrls: ['../../../styles/components/afcs-homepage-carousel.component.scss']
 })
 export class AfcsHomepageCarouselComponent implements AfterContentChecked, OnInit {
   @ViewChild('carousel') img: any;

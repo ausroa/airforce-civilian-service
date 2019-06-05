@@ -4,7 +4,7 @@ import {WindowService} from '../../services/window.service';
 @Component({
   selector: 'afcs-description3',
   templateUrl: './description3.component.html',
-  styleUrls: ['./description3.component.scss']
+  styleUrls: ['../../../styles/components/description3.component.scss']
 })
 export class Description3Component implements OnInit {
   startType3 = false;
