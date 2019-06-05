@@ -119,7 +119,7 @@ body {
   polygon {
     stroke-dasharray: 550;
     //stroke-dashoffset: -550;
-    animation: draw-hex 2s infinite;
+    animation: draw-hex 2s ease-in-out infinite;
     transform-origin: 50% 50%;
     z-index: -1;
   }
@@ -127,7 +127,7 @@ body {
   ellipse {
     transform-origin: 50% 50%;
     z-index: 1;
-    animation: draw-hex 2s infinite;
+    animation: draw-hex 2s ease-in-out infinite;
   }
 }
 
@@ -138,6 +138,16 @@ body {
   left: 50%;
   top: 10%;
   transform: translate(-50%);
+}
+
+.uc-text {
+  display: block;
+  position: absolute;
+  color: white;
+  font-size: 1.5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .uc-dots {
@@ -157,6 +167,17 @@ body {
     &-dot:nth-child(#{$i}) {
       animation-delay: $i * .5s;
       animation-fill-mode: backwards;
+    }
+  }
+}
+
+.uc-afcs-logo {
+  g {
+    path {
+      //stroke: black;
+      //stroke-dasharray: 600;
+      //stroke-dashoffset: 600;
+      animation: animateLogo 1s step-end infinite;
     }
   }
 }
@@ -204,5 +225,22 @@ body {
 
   50% {
     opacity: 1;
+  }
+}
+
+@keyframes animateLogo {
+  0% {
+    //stroke-dashoffset: 600;
+    opacity: 0;
+  }
+
+  50% {
+    //stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  100% {
+    //stroke-dashoffset: -600;
+    opacity: 0;
   }
 }
