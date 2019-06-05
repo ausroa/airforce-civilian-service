@@ -172,12 +172,15 @@ body {
 }
 
 .uc-afcs-logo {
+  position: absolute;
+
   g {
     path {
       //stroke: black;
       //stroke-dasharray: 600;
       //stroke-dashoffset: 600;
-      animation: animateLogo 1s step-end infinite;
+      transform-origin: 50% 50%;
+      animation: animateLogo 3s ease-in-out infinite;
     }
   }
 }
@@ -231,16 +234,17 @@ body {
 @keyframes animateLogo {
   0% {
     //stroke-dashoffset: 600;
-    opacity: 0;
+    //opacity: 0;
   }
 
   50% {
     //stroke-dashoffset: 0;
-    opacity: 1;
+    //opacity: 1;
   }
 
   100% {
+    transform: rotate3d(0, 1, 0, 360deg);
     //stroke-dashoffset: -600;
-    opacity: 0;
+    //opacity: 0;
   }
 }
