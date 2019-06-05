@@ -24,10 +24,10 @@ export class NavBarComponent implements OnInit {
     this.links = [
       {linkName: 'Home', url: ''},
       {linkName: 'About', url: 'about'},
-      {linkName: 'Careers', url: ''},
-      {linkName: 'Find A Job', url: ''},
-      {linkName: 'Contact', url: ''},
-      {linkName: 'Social', url: ''}
+      {linkName: 'Careers', url: 'careers'},
+      {linkName: 'Find A Job', url: 'find-a-job'},
+      {linkName: 'Contact', url: 'contact'},
+      {linkName: 'Social', url: 'social'}
     ];
 
     this.isOpen = false;

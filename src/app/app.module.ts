@@ -20,6 +20,11 @@ import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
 import { FooterComponent } from './components/footer/footer.component';
 import {InlineSVGModule} from 'ng-inline-svg';
 import { AboutPageComponent } from './views/about-page/about-page.component';
+import { CareersPageComponent } from './views/careers-page/careers-page.component';
+import { FindJobPageComponent } from './views/find-job-page/find-job-page.component';
+import { ContactPageComponent } from './views/contact-page/contact-page.component';
+import { SocialPageComponent } from './views/social-page/social-page.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { AboutPageComponent } from './views/about-page/about-page.component';
     TileButtons2Component,
     RegisterComponent,
     FooterComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    CareersPageComponent,
+    FindJobPageComponent,
+    ContactPageComponent,
+    SocialPageComponent,
+    UnderConstructionComponent
   ],
   imports: [
     BrowserModule,

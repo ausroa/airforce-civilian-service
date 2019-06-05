@@ -99,3 +99,110 @@ body {
     }
   }
 }
+
+// Under Construction style
+.uc-animation-img {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+
+  rect {
+    stroke-dasharray: 750;
+    //stroke-dashoffset: -750;
+    animation: draw-square 2s infinite;
+    transform-origin: 50% 50%;
+    z-index: -1;
+  }
+
+  polygon {
+    stroke-dasharray: 550;
+    //stroke-dashoffset: -550;
+    animation: draw-hex 2s infinite;
+    transform-origin: 50% 50%;
+    z-index: -1;
+  }
+
+  ellipse {
+    transform-origin: 50% 50%;
+    z-index: 1;
+    animation: draw-hex 2s infinite;
+  }
+}
+
+.pageName {
+  position: absolute;
+  color: #fff;
+  font-size: 2vw;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+}
+
+.uc-dots {
+  color: #fff;
+  font-size: 2vw;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &-dot {
+    opacity: 0;
+    animation: blink .5s step-end infinite;
+  }
+
+  @for $i from 1 to 4 {
+    &-dot:nth-child(#{$i}) {
+      animation-delay: $i * .5s;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+@keyframes draw-square {
+  0% {
+    //stroke-dashoffset: -750;
+    //transform: rotate(0deg);
+  }
+
+  50% {
+    //stroke-dashoffset: 0;
+    //transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 5, 0, 360deg);
+    //stroke-dashoffset: 750;
+  }
+}
+
+@keyframes draw-hex {
+  0% {
+    //stroke-dashoffset: -550;
+    //transform: rotate(0deg);
+  }
+
+  50% {
+    //stroke-dashoffset: 0;
+    //transform: rotate(180deg);
+    //transform: rotate(0deg);
+  }
+
+  100% {
+    //stroke-dashoffset: 550;
+    transform: rotate3d(0, 1, 0, 360deg);
+    //transform: rotate(720deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

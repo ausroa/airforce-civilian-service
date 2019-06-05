@@ -1,4 +1,4 @@
-import {AfterContentChecked, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'afcs-homepage-carousel',
