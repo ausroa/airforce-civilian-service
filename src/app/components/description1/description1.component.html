@@ -1,6 +1,6 @@
 <div class="description">
   <div class="description-box">
-    <p class="description-title">Lorem ipsum dolor sit.</p>
+    <h1 *ngIf="startType" class="description-title">Lorem ipsum dolor sit.</h1>
     <div *ngIf="startType" [ngClass]="{'slideOut': startType}" class="description-line"></div>
     <div *ngIf="startType" [ngClass]="{'css-typing': startType}" class="description-text">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing gor wert wer.</p>
