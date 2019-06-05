@@ -7,7 +7,7 @@
     </div>
   </swiper>
   <div *ngIf="slideUp" class="swiper-bubbles">
-    <span [ngClass]="{'active-img': i === activeSlideIndex}" class="swiper-bubbles-bubble" *ngFor="let bubble of slides; index as i" (click)="goToSlide(bubble)"></span>
+    <span [ngClass]="{'active-img': i === activeSlideIndex}" class="swiper-bubbles-bubble" *ngFor="let bubble of slides; index as i" (click)="goToSlide(i)"></span>
   </div>
 </div>
 

@@ -9,12 +9,12 @@ import {SwiperComponent} from 'angular2-useful-swiper';
 })
 export class SliderComponent implements OnInit, AfterViewChecked {
   slides: any[] = [
-    {name: '', url: 'assets/imgs/Directed Energy.jpg', id: 1},
-    {name: '', url: 'assets/imgs/home_1.jpg', id: 2},
-    {name: '', url: 'assets/imgs/Directed Energy.jpg', id: 3},
-    {name: '', url: 'assets/imgs/home_1.jpg', id: 4},
-    {name: '', url: 'assets/imgs/Directed Energy.jpg', id: 5},
-    {name: '', url: 'assets/imgs/home_1.jpg', id: 6}
+    {name: '', url: 'assets/imgs/Directed Energy.jpg'},
+    {name: '', url: 'assets/imgs/home_1.jpg'},
+    {name: '', url: 'assets/imgs/Directed Energy.jpg'},
+    {name: '', url: 'assets/imgs/home_1.jpg'},
+    {name: '', url: 'assets/imgs/Directed Energy.jpg'},
+    {name: '', url: 'assets/imgs/home_1.jpg'}
   ];
 
   config: SwiperOptions = {
@@ -57,6 +57,6 @@ export class SliderComponent implements OnInit, AfterViewChecked {
   }
 
   goToSlide(slide) {
-    console.log('Selected Slide:', slide);
+    this.mySwiper.swiper.slideTo(slide);
   }
 }
