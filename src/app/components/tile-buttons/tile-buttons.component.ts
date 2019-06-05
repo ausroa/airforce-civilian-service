@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {WindowService} from '../../services/window.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'afcs-tile-buttons',
@@ -21,7 +22,7 @@ export class TileButtonsComponent implements OnInit {
 
   private componentTriggerY = 200;
 
-  constructor(private windowService: WindowService) { }
+  constructor(private windowService: WindowService, private router: Router) { }
 
   ngOnInit() {
     this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);
@@ -32,6 +33,18 @@ export class TileButtonsComponent implements OnInit {
   showTileButtons() {
     if(window.pageYOffset > this.componentTriggerY) {
       this.showTiles = true;
+    }
+  }
+
+  sendToPage(tile) {
+    switch(tile.title) {
+      case 'about us':
+        this.router.navigate(['about']);
+        this.windowService.scrollToTop();
+        break;
+      case 'contact':
+        this.router.navigate(['contact']);
+        this.windowService.scrollToTop();
     }
   }
 }

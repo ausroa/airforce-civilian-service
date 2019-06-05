@@ -13,4 +13,8 @@ export class WindowService {
   findComponentTriggerLocation(componentTriggerLocation: number): number {
     return (componentTriggerLocation - (this.windowDefaultWidth - this.windowNewWidth)) / this.windowWidthModifier;
   }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-register',
@@ -11,9 +12,14 @@ export class RegisterComponent implements OnInit {
     {title: 'Back to Top', url: ''}
   ];
 
-  constructor() { }
+  constructor(private windowService: WindowService) { }
 
   ngOnInit() {
   }
 
+  scrollToTop(btn) {
+    if(btn.title === 'Back to Top') {
+      this.windowService.scrollToTop();
+    }
+  }
 }
