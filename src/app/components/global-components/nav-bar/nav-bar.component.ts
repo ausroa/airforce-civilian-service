@@ -236,14 +236,4 @@ export class NavBarComponent implements OnInit, AfterContentChecked {
   openSearch() {
     this.open = !this.open;
   }
-
-  // @HostListener('window:scroll', ['$event'])
-  // showNavTop() {
-  //   if(window.pageYOffset <= 0 && this.showNav === true) {
-  //     this.showNav = false;
-  //   } else {
-  //     this.showNav = true;
-  //   }
-  // }
-
 }
