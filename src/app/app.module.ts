@@ -16,7 +16,7 @@ import { VideoComponent } from './components/video/video.component';
 import { Description3Component } from './components/description3/description3.component';
 import { TileButtons2Component } from './components/tile-buttons2/tile-buttons2.component';
 import { RegisterComponent } from './components/register/register.component';
-import {SwiperComponent, SwiperModule} from 'angular2-useful-swiper';
+import {SwiperModule} from 'angular2-useful-swiper';
 import { FooterComponent } from './components/global-components/footer/footer.component';
 import {InlineSVGModule} from 'ng-inline-svg';
 import { AboutPageComponent } from './views/about-page/about-page.component';
@@ -25,6 +25,7 @@ import { FindJobPageComponent } from './views/find-job-page/find-job-page.compon
 import { ContactPageComponent } from './views/contact-page/contact-page.component';
 import { SocialPageComponent } from './views/social-page/social-page.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
+import { RegisterCardComponent } from './components/register-card/register-card.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { UnderConstructionComponent } from './components/under-construction/unde
     FindJobPageComponent,
     ContactPageComponent,
     SocialPageComponent,
-    UnderConstructionComponent
+    UnderConstructionComponent,
+    RegisterCardComponent
   ],
   imports: [
     BrowserModule,

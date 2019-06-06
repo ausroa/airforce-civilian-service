@@ -1,4 +1,4 @@
-import {Component, HostListener, Input, OnInit} from '@angular/core';
+import {Component, DoCheck, HostListener, Input, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -92,12 +92,13 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
           </div>
         </form>
         <div class="nav-btn">
-          <a class="nav-btn-text">
+          <a class="nav-btn-text" (click)="showRegister()">
             Register
           </a>
         </div>
       </div>
     </nav>
+    <afcs-register-card [showRegisterForm]="showRegisterForm" (closedModal)="onClosedModal($event)"></afcs-register-card>
   `,
 })
 export class NavBarComponent implements OnInit {
@@ -111,6 +112,7 @@ export class NavBarComponent implements OnInit {
   ];
   isOpen: boolean;
   showMenu = false;
+  showRegisterForm = false;
 
   constructor() { }
 
@@ -124,5 +126,18 @@ export class NavBarComponent implements OnInit {
 
   expandMenu() {
     this.showMenu = !this.showMenu;
+  }
+
+  showRegister() {
+    this.showRegisterForm = true;
+  }
+
+  onClosedModal(e) {
+    this.showRegisterForm = e;
+  }
+
+  @HostListener('window:click', ['$event'])
+  clickOutToClose() {
+    this.showRegisterForm = false;
   }
 }
