@@ -33,7 +33,7 @@ export class Description3Component implements OnInit {
 
   constructor(private windowService: WindowService) { }
 
-  private componentTriggerY = 4400;
+  private componentTriggerY = 4100;
 
   ngOnInit() {
     this.componentTriggerY = this.windowService.findComponentTriggerLocation(this.componentTriggerY);

@@ -44,7 +44,7 @@ export class SliderComponent implements OnInit, AfterViewChecked {
 
   @ViewChild('usefulSwiper') mySwiper: SwiperComponent;
 
-  private componentTriggerY = 2000;
+  private componentTriggerY = 1700;
 
   constructor(private windowService: WindowService, private cd: ChangeDetectorRef) { }
 

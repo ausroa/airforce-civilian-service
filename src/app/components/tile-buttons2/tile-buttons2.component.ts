@@ -24,7 +24,7 @@ export class TileButtons2Component implements OnInit {
 
   slideIn = false;
 
-  private componentTriggerY = 5276;
+  private componentTriggerY = 4976;
 
   constructor(private windowService: WindowService) { }
 

@@ -4,8 +4,9 @@
 .tile-buttons-container {
   position: relative;
   height: 100%;
-  //background-color: $afcs-blue;
   white-space: nowrap;
+  background-color: $afcs-blue;
+  animation: moveInBottom 0.5s;
 }
 
 .tile-buttons {

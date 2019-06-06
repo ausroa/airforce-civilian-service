@@ -31,7 +31,7 @@ import {WindowService} from '../../services/window.service';
 export class Description1Component implements OnInit {
   startType = false;
 
-  private componentTriggerY = 900;
+  private componentTriggerY = 600;
 
   constructor(private windowService: WindowService) { }
 

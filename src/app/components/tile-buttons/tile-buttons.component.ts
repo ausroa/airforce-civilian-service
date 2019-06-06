@@ -6,7 +6,7 @@ import {Router} from '@angular/router';
   selector: 'afcs-tile-buttons',
   styleUrls: ['../../../styles/components/tile-buttons.component.scss'],
   template: `
-    <div class="tile-buttons-container">
+    <div *ngIf="showTiles" class="tile-buttons-container">
       <div [ngClass]="{'showButtons': showTiles}" *ngFor="let tile of tileButtons" class="tile-buttons" (click)="sendToPage(tile)">
         <img class="tile-buttons-img" [src]="tile.url" alt="" height="100%" width="100%">
         <div class="tile-buttons-box">
@@ -30,7 +30,7 @@ export class TileButtonsComponent implements OnInit {
 
   showTiles = false;
 
-  private componentTriggerY = 200;
+  private componentTriggerY = 50;
 
   constructor(private windowService: WindowService, private router: Router) { }
 
