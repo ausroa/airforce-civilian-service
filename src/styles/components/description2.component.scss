@@ -4,6 +4,8 @@
 .description2 {
   position: relative;
   height: 100%;
+  background-color: $afcs-blue;
+  transform: scale(0);
 
   &-container {
     position: absolute;
@@ -42,6 +44,11 @@
 
 .moveInRight {
   animation: slideTextOutRight 1s ease;
+}
+
+.slide-mid {
+  animation: flyVideoIn 0.5s forwards;
+  backface-visibility: hidden;
 }
 
 

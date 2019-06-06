@@ -236,10 +236,12 @@
 
 @keyframes slideTile2TilesLeft {
   0% {
+    z-index: 2;
     transform: translateX(-50%);
   }
 
   100% {
+    z-index: 2;
     transform: translateX(0);
   }
 }
@@ -247,10 +249,12 @@
 
 @keyframes slideTile2TilesRight {
   0% {
+    z-index: 2;
     transform: translateX(50%);
   }
 
   100% {
+    z-index: 2;
     transform: translateX(0);
   }
 }
@@ -292,20 +296,24 @@
 @keyframes slideInTop {
   0% {
     transform: translateY(-5vw);
+    z-index: 1;
   }
 
   100% {
+    z-index: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes slideOutTop {
   0% {
+    z-index: -1;
     transform: translateY(0);
     //opacity: 1;
   }
 
   100% {
+    z-index: -1;
     transform: translateY(-10vw);
     //opacity: 0;
   }
@@ -336,11 +344,11 @@
 @keyframes revealMid {
   0% {
     transform: scale(0);
-    box-shadow: 0px 0px 0px $afcs-blue;
+    box-shadow: 0px 0px 0px;
   }
 
   100% {
     transform: scale(1);
-    box-shadow: 0px 0px 0px $afcs-blue;
+    box-shadow: 0px 0px 0px;
   }
 }

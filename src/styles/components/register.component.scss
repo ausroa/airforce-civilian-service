@@ -1,6 +1,9 @@
+@import "abstracts/variables";
+
 .register {
   position: relative;
   height: 100%;
+  background-color: $afcs-blue;
 
   &-text-box {
     display: block;

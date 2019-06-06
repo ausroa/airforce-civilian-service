@@ -1,12 +1,11 @@
-import {Component, DoCheck, HostListener, Input, OnInit} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {NavigationEnd, NavigationStart, Route, Router} from '@angular/router';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'afcs-nav-bar',
   styleUrls: ['./nav-bar.component.scss'],
   template: `
-    <nav *ngIf="showNav" class="last-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
+    <nav [ngClass]="{'slide-out-top': !showNav}" class="last-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
       <svg class="nav-animation-img" *ngIf="!showMenu"
            xmlns:dc="http://purl.org/dc/elements/1.1/"
            xmlns:cc="http://creativecommons.org/ns#"
@@ -101,7 +100,7 @@ import {NavigationEnd, NavigationStart, Route, Router} from '@angular/router';
     </nav>
     <afcs-register-card [showRegisterForm]="showRegisterForm" (closedModal)="onClosedModal($event)"></afcs-register-card>
 
-    <nav *ngIf="!showNav" [ngClass]="{'slide-out-top': showNav}" class="first-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
+    <nav [ngClass]="{'slide-out-top': showNav}" class="first-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
       <img class="navbar-brand nav-logo"
            src="assets/imgs/logo 1.png"
            alt="">
@@ -112,7 +111,7 @@ import {NavigationEnd, NavigationStart, Route, Router} from '@angular/router';
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="navbar-collapse flex-grow-1 myNavbar" [ngClass]="{'showNavbar': showMenu}">
+      <div *ngIf="!showNav" class="navbar-collapse flex-grow-1 myNavbar" [ngClass]="{'showNavbar': showMenu}">
         <ul class="navbar-nav ml-auto flex-nowrap">
           <li class="nav-item" *ngFor="let link of links">
             <a routerLink="{{link.url}}"
@@ -123,8 +122,8 @@ import {NavigationEnd, NavigationStart, Route, Router} from '@angular/router';
           <div class="search" [ngClass]="{'open': open}">
             <input type="search" class="search-box" />
             <span class="search-button" (click)="openSearch()">
-        <img class="nav-search-icon" src="assets/imgs/magniglass.png" alt="">
-      </span>
+              <img class="nav-search-icon" src="assets/imgs/magniglass.png" alt="">
+            </span>
           </div>
         </form>
         <div class="nav-btn">
@@ -186,5 +185,14 @@ export class NavBarComponent implements OnInit {
 
   openSearch() {
     this.open = !this.open;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  showNavTop() {
+    if(window.pageYOffset <= 0 && this.showNav === true) {
+      this.showNav = false;
+    } else {
+      this.showNav = true;
+    }
   }
 }

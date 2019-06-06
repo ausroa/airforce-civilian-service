@@ -5,8 +5,8 @@ import {WindowService} from '../../services/window.service';
   selector: 'afcs-description2',
   styleUrls: ['../../../styles/components/description2.component.scss'],
   template: `
-    <div class="description2" [ngClass]="{'reveal-mid': slideOut}">
-      <div *ngIf="slideOut" [ngClass]="{'moveInRight': slideOut}" class="description2-container">
+    <div class="description2" [ngClass]="{'slide-mid': slideOut}">
+      <div *ngIf="slideOut" class="description2-container">
         <p class="description2-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ducimus eos est et hic iste
           pariatur sequi similique? Assumenda doloremque, dolorum ducimus error esse incidunt, iusto
           mollitia quae, quasi rem reprehenderit tempora ut velit. Aut, nesciunt odio perferendis porro

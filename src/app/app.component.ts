@@ -20,5 +20,4 @@ import {HOST} from '@angular/core/src/render3/interfaces/view';
 })
 export class AppComponent {
   title = 'airforce-civilian-service';
-  showNavbar = false;
 }

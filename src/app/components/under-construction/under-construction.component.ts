@@ -12,7 +12,7 @@ import {Component, Input, OnInit} from '@angular/core';
       .st1{fill:#FFFFFF;}
       .st2{font-family:'Consolas';}
       .st3{font-size:8.6257px;}
-      .st4{fill:none;stroke:#fff;stroke-miterlimit:10;}
+      .st4{fill:none;stroke:#D3D3D3;stroke-miterlimit:10;}
       .st5{fill:none;stroke:#1965A7;stroke-miterlimit:10;}
     </style>
       <ellipse id="XMLID_1_" class="st0" cx="125" cy="128.9" rx="47.4" ry="45.4"/>

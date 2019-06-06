@@ -5,6 +5,7 @@
   display: inline-block;
   height: 100%;
   width: 100%;
+  background-color: $afcs-blue;
 
   &-btn {
     display: inline-block;
@@ -13,11 +14,12 @@
     position: relative;
     transition: all 0.5s ease;
     cursor: pointer;
-    animation: slideTile2TilesLeft 1s ease-out;
+    animation: slideTile2TilesLeft 1s 0.5s backwards;
     backface-visibility: hidden;
+    z-index: 2;
 
     &:last-child {
-      animation: slideTile2TilesRight 1s ease-out;
+      animation: slideTile2TilesRight 1s 0.5s backwards;
     }
 
     &:hover {
@@ -64,4 +66,6 @@
   }
 }
 
-
+.reveal-tiles2-mid {
+  animation: flyVideoIn 0.5s;
+}

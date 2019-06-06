@@ -3,12 +3,13 @@
 
 .video {
   height: 100%;
+  background-color: $afcs-blue;
+  animation: flyVideoIn 0.5s;
 
   &-player {
     height: 49.6vw;
     width: 100vw;
     transform-origin: 50% 50%;
-    animation: flyVideoIn 1s;
     box-shadow: 5px 5px 10px #000;
   }
 }

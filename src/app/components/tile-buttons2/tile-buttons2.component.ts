@@ -5,7 +5,7 @@ import {WindowService} from '../../services/window.service';
   selector: 'afcs-tile-buttons2',
   styleUrls: ['../../../styles/components/tile-buttons2.component.scss'],
   template: `
-    <div *ngIf="slideIn" class="tile-buttons2">
+    <div *ngIf="slideIn" [ngClass]="{'reveal-tiles2-mid': slideIn}" class="tile-buttons2">
       <div *ngFor="let tile of tileButtons" class="tile-buttons2-btn">
         <div class="tile-buttons2-title">
           <p class="tile-buttons2-btn-text">{{tile.title}}</p>

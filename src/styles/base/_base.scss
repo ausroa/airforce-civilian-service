@@ -52,12 +52,12 @@ body {
     font-size: 4vw;
     text-shadow: 5px 5px 10px #000;
     line-height: 3.5vw;
-    animation: moveInLeft 1s ease-out 0.75s backwards;
+    animation: moveInLeft 0.75s ease-out 0.50s backwards;
 
     &:nth-child(3) {
       font-size: 2.6vw;
       margin-top: 2vw;
-      animation: moveInLeft 1s 1.5s backwards;
+      animation: moveInLeft 0.75s 1.25s backwards;
     }
 
     &-line {
@@ -67,7 +67,7 @@ body {
       background-color: #fff;
       display: block;
       z-index: 1;
-      animation: slideOut 0.75s ease 2.25s;
+      animation: slideOut 0.75s ease 2s;
       animation-fill-mode: backwards;
     }
   }
@@ -129,7 +129,7 @@ body {
 
 .pageName {
   position: absolute;
-  color: #fff;
+  color: #000;
   font-size: 2vw;
   left: 50%;
   top: 10%;
@@ -139,7 +139,7 @@ body {
 .uc-text {
   display: block;
   position: absolute;
-  color: white;
+  color: #000;
   font-size: 1.5vw;
   top: 50%;
   left: 50%;
@@ -180,5 +180,5 @@ body {
 
 // Display section animation
 .reveal-mid {
-  animation: revealMid 1s;
+  animation: revealMid 0.5s forwards;
 }

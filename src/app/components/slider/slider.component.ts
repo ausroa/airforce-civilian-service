@@ -6,7 +6,7 @@ import {SwiperComponent} from 'angular2-useful-swiper';
   selector: 'afcs-slider',
   styleUrls: ['../../../styles/components/slider.component.scss'],
   template: `
-    <div class="swiper-container">
+    <div *ngIf="slideUp" [ngClass]="{'reveal-mid': slideUp}" class="swiper-container">
       <swiper *ngIf="slideUp" [config]="config" class="swiper" #usefulSwiper>
         <div class="swiper-wrapper">
           <div [ngClass]="{'slideUp': slideUp}" *ngFor="let slide of slides; index as i" class="swiper-slide" id="slide-{{i}}">

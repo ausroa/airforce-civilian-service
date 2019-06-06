@@ -4,6 +4,8 @@
 .description {
   position: relative;
   transform-origin: 50% 50%;
+  background-color: $afcs-blue;
+  transform: scale(0);
 
   &-box {
     position: absolute;

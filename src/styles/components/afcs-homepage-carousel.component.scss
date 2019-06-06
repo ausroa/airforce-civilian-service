@@ -12,7 +12,7 @@
     width: $c-logo-w;
     top: 10vw;
     left: $c-text-left;
-    animation: moveInRight 1s ease-out;
+    animation: moveInRight 0.75s ease-out;
   }
 }
 
@@ -25,7 +25,7 @@
   top: -4vw;
   left: $c-text-left;
   margin: 0 $c-bubble-w 0 0;
-  animation: moveInBottom 1s ease-out 0.75s backwards;
+  animation: moveInBottom 0.75s 0.50s backwards;
 }
 
 .active-img {
