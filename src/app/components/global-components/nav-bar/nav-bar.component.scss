@@ -23,8 +23,11 @@
 
   &-search-icon {
     mix-blend-mode: multiply;
-    height: 3rem;
+    height: 1vw;
     position: relative;
+    top: 30%;
+    left: 22%;
+    transform: translate(-50%, -50%);
   }
 
   &-btn {
@@ -65,7 +68,7 @@
 .showNavbar {
   text-align: center;
   display: block;
-  z-index: 5;
+  //z-index: 5;
   background-color: $afcs-blue;
 
   .nav-link {
@@ -213,8 +216,9 @@
 .first-nav {
   background-color: transparent;
   animation: slideInTop 1s;
-  position: relative;
-  top: -3vw;
+  position: absolute;
+  width: 100%;
+  top: 0;
 
   .nav-logo {
     visibility: hidden;
@@ -224,7 +228,7 @@
     background-color: transparent;
 
     &:hover {
-      background-color: gray;
+      //background-color: gray;
     }
 
     input {
@@ -233,10 +237,13 @@
 
     &-button {
       backface-visibility: hidden;
+      color: #eee;
     }
   }
 
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link:hover::before,
+  .nav-link:hover::after {
     color: palevioletred;
   }
 
@@ -254,7 +261,7 @@
 }
 
 .last-nav {
-  animation: slideInTop 1.5s;
+  animation: slideInTop 1.5s forwards;
 }
 
 .intro-cover {

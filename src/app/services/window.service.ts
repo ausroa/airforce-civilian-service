@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WindowService {
-  private windowDefaultWidth = 1920;
+  windowDefaultWidth = 1920;
   private windowNewWidth = window.innerWidth;
   private  windowWidthModifier = this.windowDefaultWidth / this.windowNewWidth;
 
