@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -101,7 +101,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   `,
 })
 export class NavBarComponent implements OnInit {
-  public links: any[] = [
+  links: any[] = [
     {linkName: 'Home', url: ''},
     {linkName: 'About', url: 'about'},
     {linkName: 'Careers', url: 'careers'},
@@ -109,15 +109,13 @@ export class NavBarComponent implements OnInit {
     {linkName: 'Contact', url: 'contact'},
     {linkName: 'Social', url: 'social'}
   ];
-  public isOpen: boolean;
-
-  showMenu: boolean;
+  isOpen: boolean;
+  showMenu = false;
 
   constructor() { }
 
   ngOnInit() {
     this.isOpen = false;
-    this.showMenu = false;
 
     $('.search-button').click(function() {
       $(this).parent().toggleClass('open');

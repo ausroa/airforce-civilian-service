@@ -31,7 +31,7 @@
     position: relative;
     @include remove-border;
     text-align: center;
-    background-color: rgb(27, 33, 52);
+    background-color: $afcs-blue;
     transition: $search-transition;
 
     &:hover {
@@ -65,17 +65,21 @@
   text-align: center;
   display: block;
   z-index: 5;
+  background-color: $afcs-blue;
 
   .nav-link {
     transition: all 0.5s ease;
+    color: #fff;
 
     &:hover {
-      background-color: #1E90FF;
+      background-color: $afcs-blue;
       color: #fff;
+      transform: translateY(-0.2vw);
+      box-shadow: 5px 5px 10px #000;
     }
 
     &:active {
-      transform: translateY(0.2vw);
+      transform: translateY(-0.1vw);
     }
   }
 
@@ -86,6 +90,8 @@
 
   .search {
     margin: auto;
+    border-radius: 10vw;
+    backface-visibility: hidden;
   }
 }
 
