@@ -7,7 +7,8 @@
   &-player {
     height: 49.6vw;
     width: 100vw;
-    animation: flyVideoIn 1s ease-out;
+    transform-origin: 50% 50%;
+    animation: flyVideoIn 1s;
     box-shadow: 5px 5px 10px #000;
   }
 }

@@ -26,6 +26,7 @@ import { ContactPageComponent } from './views/contact-page/contact-page.componen
 import { SocialPageComponent } from './views/social-page/social-page.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { RegisterCardComponent } from './components/register-card/register-card.component';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { RegisterCardComponent } from './components/register-card/register-card.
     ContactPageComponent,
     SocialPageComponent,
     UnderConstructionComponent,
-    RegisterCardComponent
+    RegisterCardComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+@import "abstracts/variables";
+@import "base/animations";
+
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: $afcs-blue;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  transform-origin: 50% 50%;
+  //transform: scale(1.1);
+  overflow: hidden;
+  animation: flyVideoIn 1s;
+}
+
+.fold-video-in {
+  animation: flyVideoOut 0.25s forwards;
+}

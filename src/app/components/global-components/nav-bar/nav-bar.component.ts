@@ -1,11 +1,12 @@
 import {Component, DoCheck, HostListener, Input, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {NavigationEnd, NavigationStart, Route, Router} from '@angular/router';
 
 @Component({
   selector: 'afcs-nav-bar',
   styleUrls: ['./nav-bar.component.scss'],
   template: `
-    <nav class="nav navbar navbar-expand-lg navbar-light cl-effect-1">
+    <nav *ngIf="showNav" class="last-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
       <svg class="nav-animation-img" *ngIf="!showMenu"
            xmlns:dc="http://purl.org/dc/elements/1.1/"
            xmlns:cc="http://creativecommons.org/ns#"
@@ -84,9 +85,44 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <div class="search">
+          <div class="search" [ngClass]="{'open': open}">
             <input type="search" class="search-box" />
-            <span class="search-button">
+            <span class="search-button" (click)="openSearch()">
+              <img class="nav-search-icon" src="assets/imgs/magniglass.png" alt="">
+            </span>
+          </div>
+        </form>
+        <div class="nav-btn">
+          <a class="nav-btn-text" (click)="showRegister()">
+            Register
+          </a>
+        </div>
+      </div>
+    </nav>
+    <afcs-register-card [showRegisterForm]="showRegisterForm" (closedModal)="onClosedModal($event)"></afcs-register-card>
+
+    <nav *ngIf="!showNav" [ngClass]="{'slide-out-top': showNav}" class="first-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
+      <img class="navbar-brand nav-logo"
+           src="assets/imgs/logo 1.png"
+           alt="">
+      <button (click)="expandMenu()" class="navbar-toggler"
+              type="button"
+              aria-controls="navbarNav"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse flex-grow-1 myNavbar" [ngClass]="{'showNavbar': showMenu}">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item" *ngFor="let link of links">
+            <a routerLink="{{link.url}}"
+               class="nav-link m-2 menu-item">{{link.linkName}}</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="search" [ngClass]="{'open': open}">
+            <input type="search" class="search-box" />
+            <span class="search-button" (click)="openSearch()">
         <img class="nav-search-icon" src="assets/imgs/magniglass.png" alt="">
       </span>
           </div>
@@ -99,6 +135,10 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       </div>
     </nav>
     <afcs-register-card [showRegisterForm]="showRegisterForm" (closedModal)="onClosedModal($event)"></afcs-register-card>
+    <div [ngClass]="{'slide-out-bottom': showNav}" class="intro-cover">
+      <img class="intro-cover-img2" src="assets/imgs/lowerMenuLogo.png" alt="" height="100%">
+      <img class="intro-cover-img" src="assets/imgs/logo 2.png" alt="" height="100%">
+    </div>
   `,
 })
 export class NavBarComponent implements OnInit {
@@ -113,15 +153,13 @@ export class NavBarComponent implements OnInit {
   isOpen: boolean;
   showMenu = false;
   showRegisterForm = false;
+  showNav = false;
+  open = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.isOpen = false;
-
-    $('.search-button').click(function() {
-      $(this).parent().toggleClass('open');
-    });
   }
 
   expandMenu() {
@@ -139,5 +177,14 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:click', ['$event'])
   clickOutToClose() {
     this.showRegisterForm = false;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  showNavbar() {
+    this.showNav = true;
+  }
+
+  openSearch() {
+    this.open = !this.open;
   }
 }

@@ -1,11 +1,11 @@
-import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-description1',
   styleUrls: ['../../../styles/components/description1.component.scss'],
   template: `
-    <div class="description">
+    <div class="description" [ngClass]="{'reveal-mid': startType}">
       <div class="description-box">
         <h1 *ngIf="startType" class="description-title">Lorem ipsum dolor sit.</h1>
         <div *ngIf="startType" [ngClass]="{'slideOut': startType}" class="description-line"></div>

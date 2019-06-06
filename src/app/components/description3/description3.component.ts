@@ -5,7 +5,7 @@ import {WindowService} from '../../services/window.service';
   selector: 'afcs-description3',
   styleUrls: ['../../../styles/components/description3.component.scss'],
   template: `
-    <div class="description">
+    <div class="description" [ngClass]="{'reveal-mid': startType3}">
       <div class="description-box">
         <h1 *ngIf="startType3" class="description-title">Lorem ipsum dolor sit.</h1>
         <div *ngIf="startType3" [ngClass]="{'slideOut': startType3}" class="description-line"></div>

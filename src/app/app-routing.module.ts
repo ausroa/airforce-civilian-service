@@ -6,8 +6,10 @@ import {CareersPageComponent} from './views/careers-page/careers-page.component'
 import {FindJobPageComponent} from './views/find-job-page/find-job-page.component';
 import {ContactPageComponent} from './views/contact-page/contact-page.component';
 import {SocialPageComponent} from './views/social-page/social-page.component';
+import {LandingPageComponent} from './views/landing-page/landing-page.component';
 
 const routes: Routes = [
+  // {path: '', component: LandingPageComponent},
   {path: '', component: HomepageComponent},
   {path: 'about', component: AboutPageComponent},
   {path: 'careers', component: CareersPageComponent},

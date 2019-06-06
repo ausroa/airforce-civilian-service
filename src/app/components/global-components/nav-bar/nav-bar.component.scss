@@ -6,13 +6,14 @@
   position: relative;
   background-color: $nav-color-white;
   padding: 0;
+  backface-visibility: hidden;
 
   &-logo {
     mix-blend-mode: multiply;
     width: 10.4vw;
     margin-left: 1.3vw;
     opacity: 0;
-    animation: fadeLogoIn 2s ease forwards;
+    animation: fadeLogoIn 2s ease 1s forwards;
   }
 
   &-link {
@@ -203,9 +204,61 @@
       fill: none !important;
       stroke: rgb(26, 100, 166);
       stroke-dasharray: 600;
-      animation: drawLogo 2s ease forwards;
+      animation: drawLogo 2s ease 1s backwards;
     }
   }
+}
+
+.first-nav {
+  background-color: transparent;
+  animation: slideInTop 1s;
+
+  .nav-logo {
+    visibility: hidden;
+  }
+
+  .search {
+    background-color: transparent;
+
+    .nav-search-icon {
+      color: #eee;
+    }
+  }
+
+  a {
+    color: #eee;
+  }
+}
+
+.last-nav {
+  animation: slideInTop 1s;
+}
+
+.intro-cover {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 3.4vw;
+  top: 49.6vw;
+  animation: slideInBottom 1s;
+
+  &-img {
+    position: absolute;
+    left: 89%;
+  }
+
+  &-img2 {
+    position: absolute;
+    left: 1%;
+  }
+}
+
+.slide-out-top {
+  animation: slideOutTop 1s forwards;
+}
+
+.slide-out-bottom {
+  animation: slideOutBottom 1s forwards;
 }
 
 

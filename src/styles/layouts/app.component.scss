@@ -1,17 +1,21 @@
 @import "../abstracts/variables";
+@import "base/animations";
 .afcs-container {
   position: relative;
+  background-color: $afcs-blue;
 }
 
 .header {
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+  position: fixed;
 }
 
 .views {
   overflow: hidden;
   width: 100%;
   background-color: $afcs-blue;
+  object-fit: contain;
 }
 
 .afcs-footer {

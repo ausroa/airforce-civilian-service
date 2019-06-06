@@ -3,6 +3,7 @@
 
 .description {
   position: relative;
+  transform-origin: 50% 50%;
 
   &-box {
     position: absolute;
@@ -32,7 +33,7 @@
     font-size: 2.5vw;
     transform: translate(-50%);
     font-family: monospace;
-    animation: fadeTitleIn 1s ease;
+    animation: fadeTitleIn 1s;
   }
 
   &-text {
@@ -108,4 +109,5 @@
 .slideOut {
   animation: slideOutFull 1s ease;
 }
+
 
