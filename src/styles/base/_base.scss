@@ -33,6 +33,15 @@ body {
   height: 1vw;
 }
 
+//views
+.about-page,
+.careers-page,
+.contact-page,
+.find-job-page,
+.social-page {
+  background-color: $afcs-blue;
+}
+
 .carousel {
   @include inline-block;
   z-index: -1;
