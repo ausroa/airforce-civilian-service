@@ -11,11 +11,11 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'afcs-register-card',
-  styleUrls: ['./register-card.component.scss'],
+  styleUrls: ['../../../styles/components/register-card.component.scss'],
   template: `
     <ng-template #content let-modal>
       <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <h4 class="modal-title" id="modal-basic-title">Register</h4>
         <button type="button" class="close" aria-label="Close" (click)="closeModal()">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -23,6 +23,10 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
       <div class="modal-body">
         <form>
           <div class="form-group">
+            <label for="dateOfBirth">Name</label>
+            <div class="input-group">
+              <input id="register-name" class="form-control" placeholder="Name" name="register-name">
+            </div>
             <label for="dateOfBirth">Date of birth</label>
             <div class="input-group">
               <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
@@ -30,11 +34,15 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
                 <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
               </div>
             </div>
+            <label for="dateOfBirth">Email</label>
+            <div class="input-group">
+              <input id="register-name" class="form-control" placeholder="email@address.com" name="register-name">
+            </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Register</button>
       </div>
     </ng-template>
   `,
