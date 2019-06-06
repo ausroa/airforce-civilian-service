@@ -4,8 +4,21 @@ import {SwiperComponent} from 'angular2-useful-swiper';
 
 @Component({
   selector: 'afcs-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['../../../styles/components/slider.component.scss']
+  styleUrls: ['../../../styles/components/slider.component.scss'],
+  template: `
+    <div class="swiper-container">
+      <swiper *ngIf="slideUp" [config]="config" class="swiper" #usefulSwiper>
+        <div class="swiper-wrapper">
+          <div [ngClass]="{'slideUp': slideUp}" *ngFor="let slide of slides; index as i" class="swiper-slide" id="slide-{{i}}">
+            <img class="swiper-slide-img" src="{{slide.url}}" alt="">
+          </div>
+        </div>
+      </swiper>
+      <div *ngIf="slideUp" class="swiper-bubbles">
+        <span [ngClass]="{'active-img': i === activeSlideIndex}" class="swiper-bubbles-bubble" *ngFor="let bubble of slides; index as i" (click)="goToSlide(i)"></span>
+      </div>
+    </div>
+  `,
 })
 export class SliderComponent implements OnInit, AfterViewChecked {
   slides: any[] = [

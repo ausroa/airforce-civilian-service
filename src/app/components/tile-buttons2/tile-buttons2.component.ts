@@ -3,8 +3,18 @@ import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-tile-buttons2',
-  templateUrl: './tile-buttons2.component.html',
-  styleUrls: ['../../../styles/components/tile-buttons2.component.scss']
+  styleUrls: ['../../../styles/components/tile-buttons2.component.scss'],
+  template: `
+    <div *ngIf="slideIn" class="tile-buttons2">
+      <div *ngFor="let tile of tileButtons" class="tile-buttons2-btn">
+        <div class="tile-buttons2-title">
+          <p class="tile-buttons2-btn-text">{{tile.title}}</p>
+          <div class="tile-buttons2-btn-line"></div>
+        </div>
+        <img class="tile-buttons2-img" src="{{tile.img}}" alt="">
+      </div>
+    </div>
+  `
 })
 export class TileButtons2Component implements OnInit {
   tileButtons: any[] = [

@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'afcs-careers-page',
-  templateUrl: './careers-page.component.html',
-  styleUrls: ['../../../styles/layouts/careers-page.component.scss']
+  styleUrls: ['../../../styles/layouts/careers-page.component.scss'],
+  template: `
+    <div class="careers-page">
+      <afcs-under-construction [pageName]="'Careers Page'"></afcs-under-construction>
+    </div>
+  `
 })
 export class CareersPageComponent implements OnInit {
 

@@ -55,7 +55,6 @@ export class RegisterCardComponent implements OnInit, OnChanges {
   constructor(private modalService: NgbModal, private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
-    console.log(this.modalService);
   }
 
   ngOnChanges(changes: SimpleChanges) {

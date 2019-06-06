@@ -4,8 +4,18 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'afcs-tile-buttons',
-  templateUrl: './tile-buttons.component.html',
   styleUrls: ['../../../styles/components/tile-buttons.component.scss'],
+  template: `
+    <div class="tile-buttons-container">
+      <div [ngClass]="{'showButtons': showTiles}" *ngFor="let tile of tileButtons" class="tile-buttons" (click)="sendToPage(tile)">
+        <img class="tile-buttons-img" [src]="tile.url" alt="" height="100%" width="100%">
+        <div class="tile-buttons-box">
+          <h1 class="tile-buttons-title" #tileButton>{{tile.title | uppercase}}</h1>
+          <div class="tile-buttons-line"></div>
+        </div>
+      </div>
+    </div>
+  `
 })
 export class TileButtonsComponent implements OnInit {
   tileButtons: any[] = [

@@ -3,8 +3,12 @@ import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-video',
-  templateUrl: './video.component.html',
-  styleUrls: ['../../../styles/components/video.component.scss']
+  styleUrls: ['../../../styles/components/video.component.scss'],
+  template: `
+    <div *ngIf="startVideo" class="video">
+      <iframe class="video-player" src="https://www.youtube.com/embed/e8BFQj0-Dmc?autoplay=1&mute=1&enablejsapi=1&controls=0" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe>
+    </div>
+  `
 })
 export class VideoComponent implements OnInit {
   startVideo = false;

@@ -2,8 +2,24 @@ import {AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild} fr
 
 @Component({
   selector: 'afcs-homepage-carousel',
-  templateUrl: './afcs-homepage-carousel.component.html',
-  styleUrls: ['../../../styles/components/afcs-homepage-carousel.component.scss']
+  styleUrls: ['../../../styles/components/afcs-homepage-carousel.component.scss'],
+  template: `
+    <div class="carousel-box">
+      <img class="carousel-box-logo" src="assets/imgs/logo 2.png" alt="afcs_logo">
+      <ngb-carousel class="carousel" [showNavigationArrows]="false" [showNavigationIndicators]="false" #carousel>
+        <ng-template ngbSlide *ngFor="let img of homepageCarouselImgs; index as i">
+          <img [src]="img.url" alt="carousel {{i}}">
+        </ng-template>
+      </ngb-carousel>
+      <div class="carousel-text-box">
+        <p class="carousel-text" *ngFor="let line of carouselText">{{line.text | uppercase}}</p>
+        <div class="carousel-text-line"></div>
+      </div>
+      <span class="bubble"
+            [ngClass]="{'active-img': pic.id === img.activeId}"
+            *ngFor="let pic of homepageCarouselImgs"></span>
+    </div>
+  `
 })
 export class AfcsHomepageCarouselComponent implements AfterContentChecked, OnInit {
   @ViewChild('carousel') img: any;
