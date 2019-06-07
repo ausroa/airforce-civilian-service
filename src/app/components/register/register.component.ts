@@ -5,7 +5,7 @@ import {WindowService} from '../../services/window.service';
   selector: 'afcs-register',
   styleUrls: ['../../../styles/components/register.component.scss'],
   template: `
-    <div class="register" [ngClass]="{'reveal-mid': showComponent}">
+    <div *ngIf="showComponent" class="register" [ngClass]="{'reveal-mid': showComponent}">
       <div class="register-text-box">
         <p class="register-text">Register here and we'll keep you informed about the latest job openings.</p>
         <div *ngFor="let btn of registerBtns" class="register-btn" (click)="scrollToTop(btn)">{{btn.title}}</div>

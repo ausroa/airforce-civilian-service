@@ -6,7 +6,6 @@
   position: relative;
   background-color: $nav-color-white;
   padding: 0;
-  backface-visibility: hidden;
 
   &-logo {
     mix-blend-mode: multiply;
@@ -23,7 +22,7 @@
 
   &-search-icon {
     mix-blend-mode: multiply;
-    height: 1vw;
+    height: 2rem;
     position: relative;
     top: 30%;
     left: 22%;
@@ -219,6 +218,7 @@
   position: absolute;
   width: 100%;
   top: 0;
+  backface-visibility: hidden;
 
   .nav-logo {
     visibility: hidden;
@@ -247,6 +247,12 @@
     color: palevioletred;
   }
 
+  .nav-link:focus,
+  .nav-link:focus::before,
+  .nav-link:focus::after {
+    color: palevioletred !important;
+  }
+
   .nav-btn {
     background-color: transparent;
 
@@ -262,6 +268,7 @@
 
 .last-nav {
   animation: slideInTop 1.5s forwards;
+  backface-visibility: hidden;
 }
 
 .intro-cover {
@@ -271,6 +278,7 @@
   height: 3.4vw;
   top: 49.6vw;
   animation: slideInBottom 0.5s;
+  backface-visibility: hidden;
 
   &-img {
     position: absolute;

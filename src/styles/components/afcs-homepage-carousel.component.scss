@@ -4,8 +4,8 @@
 
 .carousel-box {
   position: relative;
-  background-color: $afcs-blue-transparent;
   height: 49.6vw;
+  backface-visibility: hidden;
 
   &-logo {
     position: absolute;
@@ -13,6 +13,7 @@
     top: 10vw;
     left: $c-text-left;
     animation: moveInRight 0.75s ease-out;
+    backface-visibility: hidden;
   }
 }
 
@@ -26,6 +27,7 @@
   left: $c-text-left;
   margin: 0 $c-bubble-w 0 0;
   animation: moveInBottom 0.75s 0.50s backwards;
+  backface-visibility: hidden;
 }
 
 .active-img {

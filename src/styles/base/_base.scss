@@ -62,11 +62,13 @@ body {
     text-shadow: 5px 5px 10px #000;
     line-height: 3.5vw;
     animation: moveInLeft 0.75s ease-out 0.50s backwards;
+    backface-visibility: hidden;
 
     &:nth-child(3) {
       font-size: 2.6vw;
       margin-top: 2vw;
       animation: moveInLeft 0.75s 1.25s backwards;
+      backface-visibility: hidden;
     }
 
     &-line {
@@ -91,10 +93,12 @@ body {
     position: absolute!important;
     display: block!important;
     opacity: 0;
+    backface-visibility: hidden;
 
     &.active {
       position: relative!important;
       opacity: 1;
+      backface-visibility: hidden;
 
       img {
         max-height: 100vw;
@@ -114,7 +118,7 @@ body {
   width: 50%;
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 50%;
   transform: translate(-50%, -50%);
 
   rect {
@@ -150,7 +154,7 @@ body {
   position: absolute;
   color: #fff;
   font-size: 1.5vw;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

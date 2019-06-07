@@ -7,11 +7,7 @@ import {WindowService} from '../../../services/window.service';
   styleUrls: ['./nav-bar.component.scss'],
   template: `
     <nav [ngClass]="{'slide-out-top': !showNav}" class="last-nav nav navbar navbar-expand-lg navbar-light cl-effect-1">
-      <svg class="nav-animation-img" *ngIf="!showMenu"
-           xmlns:dc="http://purl.org/dc/elements/1.1/"
-           xmlns:cc="http://creativecommons.org/ns#"
-           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-           xmlns:svg="http://www.w3.org/2000/svg"
+      <svg class="nav-animation-img" *ngIf="showNav"
            xmlns="http://www.w3.org/2000/svg"
            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -67,7 +63,7 @@ import {WindowService} from '../../../services/window.service';
             inkscape:connector-curvature="0" />
         </g>
       </svg>
-      <img class="navbar-brand nav-logo"
+      <img *ngIf="showNav" class="navbar-brand nav-logo"
            src="assets/imgs/logo 1.png"
            alt="">
       <button (click)="expandMenu()" class="navbar-toggler"
@@ -81,7 +77,7 @@ import {WindowService} from '../../../services/window.service';
         <ul class="navbar-nav ml-auto flex-nowrap">
           <li class="nav-item" *ngFor="let link of links">
             <a routerLink="{{link.url}}"
-               class="nav-link m-2 menu-item">{{link.linkName}}</a>
+               class="nav-link m-2 menu-item" (click)="this.ws.scrollToTop() && showMenu = true">{{link.linkName}}</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -127,7 +123,7 @@ import {WindowService} from '../../../services/window.service';
         <ul class="navbar-nav ml-auto flex-nowrap">
           <li class="nav-item" *ngFor="let link of links">
             <a routerLink="{{link.url}}"
-               class="nav-link m-2 menu-item">{{link.linkName}}</a>
+               class="nav-link m-2 menu-item" (click)="showMenu = false">{{link.linkName}}</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -184,6 +180,8 @@ export class NavBarComponent implements OnInit, AfterContentChecked {
 
   ngOnInit() {
     this.isOpen = false;
+
+    this.showBottomBar();
   }
 
   ngAfterContentChecked() {
@@ -212,22 +210,32 @@ export class NavBarComponent implements OnInit, AfterContentChecked {
 
   get windowDefaultWidth() {
     return this.ws.windowDefaultWidth;
-
   }
 
   @HostListener('window:scroll', ['$event'])
-  showNavbar() {
+  onMouseScroll() {
     this.showNav = true;
 
-    if(window.pageYOffset <= 0 && this.showNav === true) {
+    this.showNaviBar();
+    this.showBottomBar();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.showBottomBar();
+  }
+
+  showNaviBar() {
+    if (window.pageYOffset <= 0 && this.showNav === true) {
       this.showNav = false;
     } else {
       this.showNav = true;
     }
+  }
 
-    if(window.innerWidth < this.windowDefaultWidth) {
+  showBottomBar() {
+    if (window.innerWidth < this.windowDefaultWidth) {
       this.hideBotBar = true;
-      console.log('Should I hide the bar?', this.hideBotBar);
     } else {
       this.hideBotBar = false;
     }
