@@ -226,6 +226,7 @@
 
   .search {
     background-color: transparent;
+    z-index: 2;
 
     &:hover {
       //background-color: gray;
@@ -267,7 +268,7 @@
 }
 
 .last-nav {
-  animation: slideInTop 1.5s forwards;
+  animation: slideInTop 0.5s forwards;
   backface-visibility: hidden;
 }
 

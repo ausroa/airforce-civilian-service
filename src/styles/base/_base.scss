@@ -45,6 +45,7 @@ body {
 .carousel {
   @include inline-block;
   z-index: -1;
+  backface-visibility: hidden;
 
   &-text-box {
     max-width: 100%;
@@ -118,7 +119,7 @@ body {
   width: 50%;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 30%;
   transform: translate(-50%, -50%);
 
   rect {
@@ -154,7 +155,7 @@ body {
   position: absolute;
   color: #fff;
   font-size: 1.5vw;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

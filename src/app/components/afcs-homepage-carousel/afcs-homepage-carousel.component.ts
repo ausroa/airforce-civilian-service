@@ -1,4 +1,5 @@
-import {AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewChecked, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'afcs-homepage-carousel',
@@ -21,12 +22,12 @@ import {AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild} fr
     </div>
   `
 })
-export class AfcsHomepageCarouselComponent implements AfterContentChecked, OnInit {
-  @ViewChild('carousel') img: any;
+export class AfcsHomepageCarouselComponent implements AfterViewChecked, OnInit {
+  @ViewChild('carousel') img: NgbCarousel;
 
   homepageCarouselImgs: any[] = [
-    {url: 'assets/imgs/Directed Energy.jpg', id: 'ngb-slide-0'},
-    {url: 'assets/imgs/home_1.jpg', id: 'ngb-slide-1'},
+    {url: 'assets/imgs/Directed Energy.jpg', id: ''},
+    {url: 'assets/imgs/home_1.jpg', id: ''},
   ];
 
   carouselText: any[] = [
@@ -38,17 +39,15 @@ export class AfcsHomepageCarouselComponent implements AfterContentChecked, OnIni
   constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.img.slides = {};
-    this.img.slides.first = {};
-    this.img.slides.last = {};
-    if(this.img.slides.first.id === undefined) {
-      this.img.slides.first.id = this.homepageCarouselImgs[0].id;
-    }
-    this.cd.detectChanges();
   }
 
-  ngAfterContentChecked() {
+  ngAfterViewChecked() {
     this.homepageCarouselImgs[0].id = this.img.slides.first.id;
     this.homepageCarouselImgs[1].id = this.img.slides.last.id;
+
+    this.img.slide.subscribe((slide) => {
+      this.img.activeId = slide.current;
+    });
+    this.cd.detectChanges();
   }
 }
