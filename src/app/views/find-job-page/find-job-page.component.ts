@@ -60,7 +60,7 @@ export class FindJobPageComponent implements OnInit {
         this.searchJobs = false;
       }
       this.jobs = data.SearchResult.SearchResultItems.reverse();
-      console.log(this.jobs);
+      console.log('Jobs:', this.jobs);
     });
   }
 }
