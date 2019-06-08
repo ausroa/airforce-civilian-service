@@ -4,7 +4,8 @@
 
 .carousel-box {
   position: relative;
-  height: 49.6vw;
+  min-height: 100vh;
+  max-height: 100vh;
   backface-visibility: hidden;
 
   &-logo {
@@ -23,7 +24,7 @@
   background-color: white;
   border-radius: 50%;
   @include inline-block;
-  top: -4vw;
+  top: -10vh;
   left: $c-text-left;
   margin: 0 $c-bubble-w 0 0;
   animation: moveInBottom 0.75s 0.50s backwards;

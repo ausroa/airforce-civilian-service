@@ -13,7 +13,7 @@ import {WindowService} from '../../services/window.service';
 export class VideoComponent implements OnInit {
   startVideo = false;
 
-  private componentTriggerY = 3200;
+  private componentTriggerY = 3400;
 
   constructor(private windowService: WindowService) { }
 

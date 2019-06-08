@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private windowService: WindowService) { }
 
-  private componentYTrigger = 5700;
+  private componentYTrigger = 5900;
   showComponent = false;
 
   ngOnInit() {

@@ -30,7 +30,7 @@ export class TileButtonsComponent implements OnInit {
 
   showTiles = false;
 
-  private componentTriggerY = 50;
+  private componentTriggerY = 150;
 
   constructor(private windowService: WindowService, private router: Router) { }
 

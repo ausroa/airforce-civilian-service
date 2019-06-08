@@ -4,6 +4,7 @@
 .tile-buttons-container {
   position: relative;
   height: 100%;
+  width: 100vw;
   white-space: nowrap;
   background-color: $afcs-blue;
   animation: moveInBottom 0.5s;

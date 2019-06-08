@@ -2,6 +2,7 @@
 
 .homepage-container {
   height: 100%;
+  width: 100vw;
   display: grid;
   //grid-auto-rows: minmax(15vw, auto);
   //grid-template-columns: repeat(5, 1fr);
@@ -10,8 +11,10 @@
 
 .homepage-carousel {
   position: relative;
-  height: 49.6vw;
+  min-height: 49.6vw;
+  max-height: 95.5vh;
   grid-row: 1;
+  width: 100vw;
   grid-column: 5;
   z-index: 1;
   background-color: $afcs-blue;
@@ -22,6 +25,7 @@
   grid-column: 5;
   height: 30vw;
   z-index: 2;
+  width: 100vw;
 }
 .homepage-description1 {
   position: relative;
@@ -30,11 +34,13 @@
   grid-column: 5;
   height: 56.6vw;
   z-index: 1;
+  width: 100vw;
 }
 .homepage-slider {
   position: relative;
   //background-color: $afcs-blue;
   height: 30vw;
+  width: 100vw;
   grid-row: 4;
   grid-column: 5;
   z-index: 2;
@@ -47,6 +53,7 @@
   position: relative;
   //background-color: $afcs-blue;
   height: 27vw;
+  width: 100vw;
   grid-row: 5;
   grid-column: 5;
   overflow-y: visible;
@@ -56,6 +63,7 @@
   position: relative;
   //background-color: $afcs-blue;
   height: 56.6vw;
+  width: 100vw;
   grid-row: 6;
   grid-column: 5;
   z-index: 2;
@@ -64,6 +72,7 @@
   position: relative;
   //background-color: $afcs-blue;
   height: 55vw;
+  width: 100vw;
   grid-row: 7;
   grid-column: 5;
   z-index: 1;
@@ -72,6 +81,7 @@
   position: relative;
   //background-color: $afcs-blue;
   height: 33.5vw;
+  width: 100vw;
   grid-row: 8;
   grid-column: 5;
   z-index: 2;
@@ -80,6 +90,7 @@
   position: relative;
   //background-color: $afcs-blue;
   height: 20vw;
+  width: 100vw;
   grid-row: 9;
   grid-column: 5;
   z-index: 1;

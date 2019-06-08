@@ -212,6 +212,10 @@ export class NavBarComponent implements OnInit, AfterContentChecked {
     return this.ws.windowDefaultWidth;
   }
 
+  get windowDefaultWidthSmall() {
+    return this.ws.windowDefaultWidthSmall;
+  }
+
   @HostListener('window:scroll', ['$event'])
   onMouseScroll() {
     this.showNav = true;
@@ -234,7 +238,7 @@ export class NavBarComponent implements OnInit, AfterContentChecked {
   }
 
   showBottomBar() {
-    if (window.innerWidth < this.windowDefaultWidth) {
+    if (window.innerWidth < this.windowDefaultWidthSmall) {
       this.hideBotBar = true;
     } else {
       this.hideBotBar = false;
