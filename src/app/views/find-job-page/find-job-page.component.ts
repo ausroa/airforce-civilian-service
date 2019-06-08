@@ -9,17 +9,32 @@ import {ApiService} from '../../services/api.service';
       <div class="find-job-page-animation">
         <afcs-under-construction [pageName]="'Find a Job Page'"></afcs-under-construction>
       </div>
-      <div class="find-job-page-search">
+      <div class="find-job-page-input">
+        <input type="text" [(ngModel)]="jobPosition">
+        <button (click)="searchForJobs()">Search</button>
         <h1>Find a job search</h1>
-        <div class="find-job-page-input">
-          <input type="text" [(ngModel)]="jobPosition">
-          <button (click)="searchForJobs()">Search</button>
-          <div class="find-job-page-list">
-            <ul>
-              <li></li>
-            </ul>
+      </div>
+      <div class="find-job-page-search">
+        <div class="find-job-page-list">
+          <div class="list-group">
+            <div *ngFor="let job of jobs" class="list-group-item">
+              <p>
+                <span class="job-title">{{job.MatchedObjectDescriptor.PositionTitle}}</span>
+                <br>
+                <span class="job-org">{{job.MatchedObjectDescriptor.OrganizationName}}</span>
+                <br>
+                <small class="job-post-date">POSTED: {{job.MatchedObjectDescriptor.PublicationStartDate}}</small>
+                <br>
+                <br>
+                <span class="job-summary">Summary <br> {{job.MatchedObjectDescriptor.UserArea.Details.JobSummary}}</span>
+                <br>
+                <br>
+                <span class="job-qual">Qualifications <br> {{job.MatchedObjectDescriptor.QualificationSummary}}</span>
+              </p>
+            </div>
           </div>
         </div>
+        <p *ngIf="searchJobs">No Results Found</p>
       </div>
     </div>
   `
@@ -27,6 +42,7 @@ import {ApiService} from '../../services/api.service';
 export class FindJobPageComponent implements OnInit {
   @Input() jobPosition: string;
   jobs = [];
+  searchJobs = false;
 
   constructor(private api: ApiService) { }
 
@@ -34,9 +50,16 @@ export class FindJobPageComponent implements OnInit {
   }
 
   searchForJobs() {
-    this.api.getJobs(this.jobPosition).subscribe((data: []) => {
-      console.log(data);
-      this.jobs = data;
+    if(this.jobs.length > 0) {
+      this.jobs = [];
+    }
+    return this.api.getJobs(this.jobPosition).subscribe((data) => {
+      if(data.SearchResult.SearchResultItems.length === 0) {
+        this.searchJobs = true;
+      } else {
+        this.searchJobs = false;
+      }
+      this.jobs = data.SearchResult.SearchResultItems.reverse();
       console.log(this.jobs);
     });
   }

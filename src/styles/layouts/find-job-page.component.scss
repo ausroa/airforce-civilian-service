@@ -1,20 +1,104 @@
+@import "base/animations";
+
 .find-job-page {
   height: 100vw;
   display: grid;
+  position: relative;
 
   &-animation {
     grid-row: 1;
     height: 49.6vw;
   }
 
+  &-input {
+    grid-row: 2;
+    position: absolute;
+    font-size: 1vw;
+    top: 15%;
+    left: 42.5%;
+    z-index: 1;
+
+    input {
+      border-radius: 10px;
+      padding: 0.5vw;
+      outline: none;
+      text-align: center;
+    }
+
+    button {
+      border-radius: 10px;
+      padding: 0.5vw;
+      margin-left: 0.5vw;
+      outline: none;
+    }
+  }
+
   &-search {
     height: 30vw;
     width: 60vw;
-    background-color: white;
+    background-color: inherit;
     position: relative;
-    grid-row: 2;
+    grid-row: 3;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
+  }
+
+  &-list {
+    width: 100%;
+  }
+
+  h1 {
+    color: white;
+    position: absolute;
+    left: -22vw;
+    top: 1vw;
+  }
+
+  p {
+    color: white;
+  }
+
+  //input, button {
+  //  z-index: 1;
+  //}
+  //
+  //input {
+  //  position: absolute;
+  //  left: 47%;
+  //  transform: translate(-50%);
+  //  font-size: 1vw;
+  //}
+  //
+  //button {
+  //  position: absolute;
+  //  left: 59.4%;
+  //  transform: translate(-50%);
+  //  font-size: 1vw;
+  //}
+
+  .list-group-item {
+    animation: fadeIn 0.5s ease;
+    background-color: inherit;
+    border-bottom: 1px solid #eee;
   }
 }
+
+.job-title {
+  font-size: 1vw;
+}
+
+.job-org {
+  font-size: 0.8vw;
+}
+
+.job-summary,
+.job-qual {
+  font-size: 0.7vw;
+}
+
+.job-post-date {
+  font-size: 0.5vw;
+}
+

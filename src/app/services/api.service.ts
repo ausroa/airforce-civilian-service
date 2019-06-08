@@ -6,8 +6,8 @@ import { map, catchError, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
-  private url = 'https://data.usajobs.gov/api/Search?Organization=AF&PositionTitle=';
+export class ApiService { // TODO add pagination for pages and add url for links
+  private url = 'https://data.usajobs.gov/api/Search?Organization=AF&ResultsPerPage=10&Page=1&PositionTitle=';
   private host = 'data.usajobs.gov';
   private userAgent = 'ausroa@gmail.com';
   private  authKey = '8W6jnrySUa0PNrcug0gxHIbeE4s10/kOE5G4oyvmkxE=';
