@@ -1,3 +1,20 @@
 .find-job-page {
-  height: 100vh;
+  height: 100vw;
+  display: grid;
+
+  &-animation {
+    grid-row: 1;
+    height: 49.6vw;
+  }
+
+  &-search {
+    height: 30vw;
+    width: 60vw;
+    background-color: white;
+    position: relative;
+    grid-row: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

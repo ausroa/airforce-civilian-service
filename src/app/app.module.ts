@@ -27,6 +27,8 @@ import { SocialPageComponent } from './views/social-page/social-page.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { RegisterCardComponent } from './components/register-card/register-card.component';
 import { LandingPageComponent } from './views/landing-page/landing-page.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { LandingPageComponent } from './views/landing-page/landing-page.componen
     NgbModule,
     BrowserAnimationsModule,
     SwiperModule,
-    InlineSVGModule
+    InlineSVGModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
