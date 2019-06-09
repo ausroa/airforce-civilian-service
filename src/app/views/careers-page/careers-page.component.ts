@@ -13,11 +13,13 @@ import {ApiService} from '../../services/api.service';
     </div>
     <div class="careers">
       <div class="list-group careers-list">
-        <div *ngFor="let job of allAFJobs.SearchResult.SearchResultItems" class="list-group-item careers-list-item">
+        <a href="{{job.MatchedObjectDescriptor.PositionURI}}" target="_blank" *ngFor="let job of allAFJobs.SearchResult.SearchResultItems" class="list-group-item careers-list-item">
           <p>
             <span>{{job.MatchedObjectDescriptor.PositionTitle}}</span>
             <br>
             <small>POSTED: {{job.MatchedObjectDescriptor.PublicationStartDate}}</small>
+            <br>
+            <span>{{job.MatchedObjectDescriptor.PositionLocationDisplay}}</span>
             <br>
             <br>
             <span>{{job.MatchedObjectDescriptor.QualificationSummary}}</span>
@@ -25,7 +27,7 @@ import {ApiService} from '../../services/api.service';
             <br>
             <span *ngFor="let sal of job.MatchedObjectDescriptor.PositionRemuneration">Salary {{sal.RateIntervalCode}}: {{sal.MinimumRange}}</span>
           </p>
-        </div>
+        </a>
       </div>
     </div>
   `

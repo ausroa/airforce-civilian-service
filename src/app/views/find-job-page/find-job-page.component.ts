@@ -17,13 +17,15 @@ import {ApiService} from '../../services/api.service';
       <div class="find-job-page-search">
         <div class="find-job-page-list">
           <div class="list-group">
-            <div *ngFor="let job of jobs" class="list-group-item">
+            <a href="{{job.MatchedObjectDescriptor.PositionURI}}" target="_blank" *ngFor="let job of jobs" class="list-group-item">
               <p>
                 <span class="job-title">{{job.MatchedObjectDescriptor.PositionTitle}}</span>
                 <br>
                 <span class="job-org">{{job.MatchedObjectDescriptor.OrganizationName}}</span>
                 <br>
                 <small class="job-post-date">POSTED: {{job.MatchedObjectDescriptor.PublicationStartDate}}</small>
+                <br>
+                <span>{{job.MatchedObjectDescriptor.PositionLocationDisplay}}</span>
                 <br>
                 <span *ngFor="let sal of job.MatchedObjectDescriptor.PositionRemuneration">Salary {{sal.RateIntervalCode}}: {{sal.MinimumRange}}</span>
                 <br>
@@ -33,7 +35,7 @@ import {ApiService} from '../../services/api.service';
                 <br>
                 <span class="job-qual">Qualifications <br> {{job.MatchedObjectDescriptor.QualificationSummary}}</span>
               </p>
-            </div>
+            </a>
           </div>
         </div>
         <p *ngIf="searchJobs">No Results Found</p>
