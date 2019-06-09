@@ -25,6 +25,8 @@ import {ApiService} from '../../services/api.service';
                 <br>
                 <small class="job-post-date">POSTED: {{job.MatchedObjectDescriptor.PublicationStartDate}}</small>
                 <br>
+                <span *ngFor="let sal of job.MatchedObjectDescriptor.PositionRemuneration">Salary {{sal.RateIntervalCode}}: {{sal.MinimumRange}}</span>
+                <br>
                 <br>
                 <span class="job-summary">Summary <br> {{job.MatchedObjectDescriptor.UserArea.Details.JobSummary}}</span>
                 <br>

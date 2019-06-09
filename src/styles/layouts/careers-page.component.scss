@@ -1,3 +1,40 @@
+@import "abstracts/variables";
+
 .careers-page {
-  height: 100vh;
+  height: 130vh;
+  display: grid;
+  background-color: $afcs-blue;
+  position: relative;
+  z-index: -1;
+}
+
+.careers {
+  grid-row: 2;
+
+  &-animation {
+    svg {
+      top: 35%;
+    }
+
+    .uc-text {
+      top: 70%;
+    }
+  }
+
+  &-title {
+    background-color: $afcs-blue;
+    color: #eee;
+  }
+
+  &-list {
+
+    &-item {
+      background-color: $afcs-blue;
+      color: #eee;
+    }
+  }
+}
+
+.list-group-item {
+  border: 1px solid #eee;
 }
