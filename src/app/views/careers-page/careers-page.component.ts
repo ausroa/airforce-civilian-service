@@ -13,7 +13,7 @@ import {ApiService} from '../../services/api.service';
     </div>
     <div class="careers">
       <div class="list-group careers-list">
-        <div *ngFor="let job of allAFJobs" class="list-group-item careers-list-item">
+        <div *ngFor="let job of allAFJobs.SearchResult.SearchResultItems" class="list-group-item careers-list-item">
           <p>
             <span>{{job.MatchedObjectDescriptor.PositionTitle}}</span>
             <br>
@@ -31,7 +31,7 @@ import {ApiService} from '../../services/api.service';
   `
 })
 export class CareersPageComponent implements OnInit {
-  allAFJobs = [];
+  allAFJobs: any;
 
   constructor(private api: ApiService) { }
 
@@ -41,8 +41,8 @@ export class CareersPageComponent implements OnInit {
 
   callForAllJobs() {
     return this.api.getAllJobs().subscribe((data) => {
-      this.allAFJobs = data.SearchResult.SearchResultItems;
-      console.log('All Air Force Jobs:', this.allAFJobs);
+      this.allAFJobs = data;
+      console.log('All Air Force Jobs:', this.allAFJobs.SearchResult.SearchResultItems);
     });
   }
 }
