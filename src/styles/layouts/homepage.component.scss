@@ -13,8 +13,9 @@
   position: relative;
   min-height: 49.6vw;
   max-height: 95.5vh;
+  max-width: 100vw;
   grid-row: 1;
-  width: 100vw;
+  //width: 100vw;
   grid-column: 5;
   z-index: 1;
   background-color: $afcs-blue;
@@ -96,3 +97,9 @@
   z-index: 1;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .homepage-carousel {
+    height: 100vh;
+  }
+}

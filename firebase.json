@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/airforce-civilian-service",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
