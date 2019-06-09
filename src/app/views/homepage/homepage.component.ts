@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {WindowService} from '../../services/window.service';
 
 @Component({
   selector: 'afcs-homepage',
@@ -37,8 +38,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ws: WindowService) {
+
+  }
 
   ngOnInit() {
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0);
+    };
   }
 }
