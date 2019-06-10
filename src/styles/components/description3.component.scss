@@ -37,7 +37,7 @@
     top: 2vw;
     font-size: 2.5vw;
     transform: translate(-50%);
-    font-family: monospace;
+    font-family: Roboto;
     animation: fadeTitleIn 1s ease;
   }
 
@@ -45,7 +45,7 @@
     position: relative;
     top: 7vw;
     left: 50%;
-    width: 70vw;
+    width: 57vw;
     transform: translate(-50%);
     font-size: 1.5vw;
 
@@ -56,7 +56,7 @@
 }
 
 .css-typing p {
-  font-family: monospace;
+  font-family: Roboto;
   font-size: 1.5vw;
   white-space: nowrap;
   overflow: hidden;
