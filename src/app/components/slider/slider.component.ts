@@ -24,7 +24,7 @@ export class SliderComponent implements OnInit, AfterViewChecked {
   slides: any[] = [
     {name: '', url: 'assets/imgs/Directed Energy.jpg'},
     {name: '', url: 'assets/imgs/home_1.jpg'},
-    {name: '', url: 'assets/imgs/Directed Energy.jpg'},
+    {name: '', url: 'assets/imgs/midSlide2.png'},
     {name: '', url: 'assets/imgs/home_1.jpg'},
     {name: '', url: 'assets/imgs/Directed Energy.jpg'},
     {name: '', url: 'assets/imgs/home_1.jpg'}
