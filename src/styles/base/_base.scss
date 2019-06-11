@@ -109,42 +109,18 @@ body {
       backface-visibility: hidden;
 
       img {
+        object-fit: cover !important;
+        object-position: 70% 0;
         height: 100%;
-        width: 100vw;
+        width: 100%;
       }
     }
 
     img {
+      object-fit: cover !important;
+      object-position: 70% 0;
       height: 100%;
-      width: 100vw;
-    }
-  }
-}
-
-// Carousel Mobile Layout
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .carousel {
-
-    &-inner {
-      height: 100vh;
-    }
-
-    &-item {
-      height: 100vh;
-
-      &.active {
-        height: 100vh;
-
-        img {
-          //width: 100vw;
-          height: 100%;
-        }
-      }
-      img {
-        //width: 100vw;
-        height: 100%;
-      }
+      width: 100%;
     }
   }
 }
